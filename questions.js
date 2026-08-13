@@ -4,4 +4,4 @@ const QUESTIONS = [
 ];
 
 /* اتصال به exam.html */
-window.QUESTIONS = QUESTIONS;
+window.QUESTIONS = questions;

@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>آزمون آنلاین</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: #172554;
+            color: white;
+            padding: 20px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header h1 {
+            margin: 0 0 8px;
+            font-size: 24px;
+        }
+
+        .candidate {
+            opacity: .85;
+            font-size: 14px;
+        }
+
+        .timer-box {
+            text-align: center;
+            min-width: 130px;
+        }
+
+        .timer-label {
+            font-size: 13px;
+            opacity: .8;
+            margin-bottom: 5px;
+        }
+
+        #timer {
+            font-size: 30px;
+            font-weight: bold;
+            direction: ltr;
+        }
+
+        #timer.danger {
+            color: #fecaca;
+        }
+
+        .progress {
+            width: 100%;
+            height: 9px;
+            background: #e2e8f0;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        #progressBar {
+            width: 0%;
+            height: 100%;
+            background: #4f46e5;
+            transition: width .3s;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,.08);
+        }
+
+        .question-number {
+            color: #4f46e5;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #questionText {
+            font-size: 20px;
+            line-height: 2;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .options {
+            display: grid;
+            gap: 12px;
+        }
+
+        .option {
+            border: 2px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 16px;
+            cursor: pointer;
+            transition: .2s;
+            background: white;
+            line-height: 1.8;
+        }
+
+        .option:hover {
+            border-color: #6366f1;
+        }
+
+        .option.selected {
+            background: #eef2ff;
+            border-color: #4f46e5;
+        }
+
+        .option input {
+            margin-left: 10px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 11px;
+            padding: 13px 25px;
+            font-family: inherit;
+            font-size: 15px;
+            cursor: pointer;
+            background: #4f46e5;
+            color: white;
+        }
+
+        button:hover {
+            opacity: .9;
+        }
+
+        button.secondary {
+            background: #64748b;
+        }
+
+        button.finish {
+            background: #dc2626;
+        }
+
+        .navigation {
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 18px;
+        }
+
+        .navigation h3 {
+            margin-top: 0;
+        }
+
+        #nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        #nav button {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            background: white;
+            color: #0f172a;
+            border: 1px solid #cbd5e1;
+        }
+
+        #nav button.current {
+            background: #4f46e5;
+            color: white;
+        }
+
+        #nav button.answered {
+            border-color: #16a34a;
+            background: #dcfce7;
+        }
+
+        #result {
+            display: none;
+        }
+
+        .result-card {
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 40px rgba(0,0,0,.1);
+        }
+
+        .score {
+            font-size: 45px;
+            font-weight: bold;
+            color: #4f46e5;
+            margin: 20px;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 650px) {
+
+            .container {
+                padding: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            #questionText {
+                font-size: 17px;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .controls button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- صفحه آزمون -->
+
+    <div id="examPage">
+
+        <div class="header">
+
+            <div>
+
+                <h1 id="examTitle">
+                    آزمون آنلاین
+                </h1>
+
+                <div class="candidate">
+                    داوطلب:
+                    <span id="candidateName">
+                        -
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="timer-box">
+
+                <div class="timer-label">
+                    زمان باقی‌مانده
+                </div>
+
+                <div id="timer">
+                    100:00
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="progress">
+
+            <div id="progressBar"></div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div
+                class="question-number"
+                id="questionNumber">
+                سؤال 1 از 100
+            </div>
+
+            <div id="questionText">
+                در حال بارگذاری سؤال...
+            </div>
+
+            <div
+                class="options"
+                id="options">
+            </div>
+
+
+            <div class="controls">
+
+                <button
+                    class="secondary"
+                    id="prevButton"
+                    onclick="previousQuestion()">
+                    ← سؤال قبلی
+                </button>
+
+                <button
+                    onclick="nextQuestion()"
+                    id="nextButton">
+                    سؤال بعدی →
+                </button>
+
+                <button
+                    class="finish"
+                    onclick="finishExam()"
+                    id="finishButton">
+                    پایان آزمون
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="navigation">
+
+            <h3>
+                شماره سؤال
+            </h3>
+
+            <div id="nav"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- نتیجه -->
+
+    <div id="result">
+
+        <div class="result-card">
+
+            <h1>
+                نتیجه آزمون
+            </h1>
+
+            <div class="score" id="score">
+                0%
+            </div>
+
+            <div class="result-row">
+                <span>نام داوطلب</span>
+                <strong id="resultName">-</strong>
+            </div>
+
+            <div class="result-row">
+                <span>تعداد صحیح</span>
+                <strong id="correct">0</strong>
+            </div>
+
+            <div class="result-row">
+                <span>تعداد غلط</span>
+                <strong id="wrong">0</strong>
+            </div>
+
+            <div class="result-row">
+                <span>بدون پاسخ</span>
+                <strong id="unanswered">0</strong>
+            </div>
+
+            <br>
+
+            <button onclick="location.href='index.html'">
+                بازگشت به صفحه اصلی
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   دریافت سوالات
+   ===================================================== */
+
+let questions = [];
+
+let currentQuestion = 0;
+
+let userAnswers = {};
+
+let remainingSeconds = 100 * 60;
+
+let timerInterval = null;
+
+let finished = false;
+
+
+/* =====================================================
+   دریافت داوطلب
+   ===================================================== */
+
+const candidateName =
+    localStorage.getItem("candidateName") || "داوطلب";
+
+
+const candidateCode =
+    localStorage.getItem("candidateCode") || "";
+
+
+document.getElementById(
+    "candidateName"
+).textContent = candidateName;
+
+
+/* =====================================================
+   بارگذاری questions
+   ===================================================== */
+
+function loadQuestions() {
+
+    const script =
+        document.createElement("script");
+
+    /*
+     * در پروژه تو فایل فعلی questions نام دارد.
+     * اگر آن فایل جاوااسکریپت است، همین مسیر استفاده می‌شود.
+     */
+
+    script.src = "questions";
+
+
+    script.onload = function () {
+
+        if (
+            Array.isArray(window.QUESTIONS)
+        ) {
+
+            questions =
+                window.QUESTIONS;
+
+            startExam();
+
+        } else {
+
+            showError(
+                "آرایه QUESTIONS در فایل questions پیدا نشد."
+            );
+        }
+    };
+
+
+    script.onerror = function () {
+
+        /*
+         * تلاش دوم برای questions.js
+         */
+
+        const second =
+            document.createElement("script");
+
+        second.src = "questions.js";
+
+
+        second.onload = function () {
+
+            if (
+                Array.isArray(window.QUESTIONS)
+            ) {
+
+                questions =
+                    window.QUESTIONS;
+
+                startExam();
+
+            } else {
+
+                showError(
+                    "فایل سوالات پیدا شد اما QUESTIONS وجود ندارد."
+                );
+            }
+
+        };
+
+
+        second.onerror = function () {
+
+            showError(
+                "فایل questions یا questions.js پیدا نشد."
+            );
+
+        };
+
+
+        document.head.appendChild(second);
+    };
+
+
+    document.head.appendChild(script);
+}
+
+
+/* =====================================================
+   شروع
+   ===================================================== */
+
+function startExam() {
+
+    if (!questions.length) {
+
+        showError(
+            "هیچ سؤالی پیدا نشد."
+        );
+
+        return;
+    }
+
+
+    document.getElementById(
+        "examTitle"
+    ).textContent =
+        "آزمون آنلاین";
+
+
+    renderNavigation();
+
+    showQuestion();
+
+    startTimer();
+}
+
+
+/* =====================================================
+   نمایش سؤال
+   ===================================================== */
+
+function showQuestion() {
+
+    const q =
+        questions[currentQuestion];
+
+
+    if (!q) return;
+
+
+    document.getElementById(
+        "questionNumber"
+    ).textContent =
+        `سؤال ${currentQuestion + 1} از ${questions.length}`;
+
+
+    document.getElementById(
+        "questionText"
+    ).textContent =
+        q.text || "";
+
+
+    const options =
+        document.getElementById(
+            "options"
+        );
+
+
+    options.innerHTML = "";
+
+
+    (q.options || []).forEach(
+        function(option, index) {
+
+            const label =
+                document.createElement("label");
+
+
+            label.className =
+                "option";
+
+
+            if (
+                userAnswers[q.id] === index
+            ) {
+
+                label.classList.add(
+                    "selected"
+                );
+            }
+
+
+            label.innerHTML = `
+
+                <input
+                    type="radio"
+                    name="answer"
+                    value="${index}"
+                    ${userAnswers[q.id] === index ? "checked" : ""}
+                >
+
+                <strong>
+                    ${index + 1})
+                </strong>
+
+                ${escapeHTML(option)}
+
+            `;
+
+
+            label.onclick =
+                function() {
+
+                    userAnswers[q.id] =
+                        index;
+
+                    showQuestion();
+
+                    renderNavigation();
+                };
+
+
+            options.appendChild(label);
+
+        }
+    );
+
+
+    document.getElementById(
+        "prevButton"
+    ).disabled =
+        currentQuestion === 0;
+
+
+    document.getElementById(
+        "nextButton"
+    ).textContent =
+        currentQuestion ===
+        questions.length - 1
+            ? "پایان"
+            : "سؤال بعدی →";
+
+
+    const progress =
+        ((currentQuestion + 1) /
+        questions.length) * 100;
+
+
+    document.getElementById(
+        "progressBar"
+    ).style.width =
+        progress + "%";
+}
+
+
+/* =====================================================
+   سؤال قبلی
+   ===================================================== */
+
+function previousQuestion() {
+
+    if (
+        currentQuestion > 0
+    ) {
+
+        currentQuestion--;
+
+        showQuestion();
+
+        renderNavigation();
+    }
+}
+
+
+/* =====================================================
+   سؤال بعدی
+   ===================================================== */
+
+function nextQuestion() {
+
+    if (
+        currentQuestion <
+        questions.length - 1
+    ) {
+
+        currentQuestion++;
+
+        showQuestion();
+
+        renderNavigation();
+
+    } else {
+
+        finishExam();
+    }
+}
+
+
+/* =====================================================
+   ناوبری
+   ===================================================== */
+
+function renderNavigation() {
+
+    const nav =
+        document.getElementById(
+            "nav"
+        );
+
+
+    nav.innerHTML = "";
+
+
+    questions.forEach(
+        function(q, index) {
+
+            const button =
+                document.createElement(
+                    "button"
+                );
+
+
+            button.textContent =
+                index + 1;
+
+
+            if (
+                index === currentQuestion
+            ) {
+
+                button.classList.add(
+                    "current"
+                );
+            }
+
+
+            if (
+                userAnswers[q.id] !== undefined
+            ) {
+
+                button.classList.add(
+                    "answered"
+                );
+            }
+
+
+            button.onclick =
+                function() {
+
+                    currentQuestion =
+                        index;
+
+                    showQuestion();
+
+                    renderNavigation();
+                };
+
+
+            nav.appendChild(button);
+
+        }
+    );
+}
+
+
+/* =====================================================
+   تایمر
+   ===================================================== */
+
+function startTimer() {
+
+    updateTimer();
+
+
+    timerInterval =
+        setInterval(
+            function() {
+
+                if (finished) {
+                    return;
+                }
+
+
+                remainingSeconds--;
+
+
+                updateTimer();
+
+
+                if (
+                    remainingSeconds <= 0
+                ) {
+
+                    finishExam(true);
+                }
+
+            },
+            1000
+        );
+}
+
+
+function updateTimer() {
+
+    const minutes =
+        Math.floor(
+            remainingSeconds / 60
+        );
+
+
+    const seconds =
+        remainingSeconds % 60;
+
+
+    const timer =
+        document.getElementById(
+            "timer"
+        );
+
+
+    timer.textContent =
+        String(minutes).padStart(2,"0") +
+        ":" +
+        String(seconds).padStart(2,"0");
+
+
+    if (
+        remainingSeconds <= 60
+    ) {
+
+        timer.classList.add(
+            "danger"
+        );
+    }
+}
+
+
+/* =====================================================
+   پایان آزمون
+   ===================================================== */
+
+function finishExam(autoFinish = false) {
+
+    if (finished) {
+        return;
+    }
+
+
+    if (!autoFinish) {
+
+        const confirmFinish =
+            confirm(
+                "آیا مطمئن هستید که می‌خواهید آزمون را تمام کنید؟"
+            );
+
+
+        if (!confirmFinish) {
+            return;
+        }
+    }
+
+
+    finished = true;
+
+
+    clearInterval(
+        timerInterval
+    );
+
+
+    let correct = 0;
+
+    let wrong = 0;
+
+    let unanswered = 0;
+
+
+    questions.forEach(
+        function(q, index) {
+
+            const answer =
+                userAnswers[q.id];
+
+
+            const correctAnswer =
+                getCorrectAnswer(
+                    q,
+                    index
+                );
+
+
+            if (
+                answer === undefined
+            ) {
+
+                unanswered++;
+
+            } else if (
+                answer === correctAnswer
+            ) {
+
+                correct++;
+
+            } else {
+
+                wrong++;
+            }
+
+        }
+    );
+
+
+    const percent =
+        questions.length
+            ? (
+                correct /
+                questions.length
+            ) * 100
+            : 0;
+
+
+    const result = {
+
+        candidateName,
+
+        candidateCode,
+
+        correct,
+
+        wrong,
+
+        unanswered,
+
+        percent:
+            Number(
+                percent.toFixed(2)
+            ),
+
+        totalQuestions:
+            questions.length,
+
+        answers:
+            userAnswers,
+
+        date:
+            new Date().toISOString()
+
+    };
+
+
+    let results = [];
+
+
+    try {
+
+        results =
+            JSON.parse(
+                localStorage.getItem(
+                    "exam_results"
+                ) || "[]"
+            );
+
+    } catch(e) {
+
+        results = [];
+    }
+
+
+    results.push(result);
+
+
+    localStorage.setItem(
+        "exam_results",
+        JSON.stringify(results)
+    );
+
+
+    document.getElementById(
+        "examPage"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "result"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "score"
+    ).textContent =
+        percent.toFixed(1) + "%";
+
+
+    document.getElementById(
+        "resultName"
+    ).textContent =
+        candidateName;
+
+
+    document.getElementById(
+        "correct"
+    ).textContent =
+        correct;
+
+
+    document.getElementById(
+        "wrong"
+    ).textContent =
+        wrong;
+
+
+    document.getElementById(
+        "unanswered"
+    ).textContent =
+        unanswered;
+}
+
+
+/* =====================================================
+   کلید پاسخ
+   ===================================================== */
+
+const answers = {
+
+    1:4,
+    2:4,
+    3:1,
+    4:2,
+    5:1,
+    6:2,
+    7:3,
+    8:4,
+    9:3,
+    10:1,
+    11:2,
+    12:3,
+    13:1,
+    14:4,
+    15:2,
+    16:1,
+    17:3,
+    18:1,
+    19:2,
+    20:3,
+    21:2,
+    22:4,
+    23:3,
+    24:2,
+    25:1,
+    26:1,
+    27:4,
+    28:3,
+    29:4,
+    30:1,
+    31:2,
+    32:1,
+    33:2,
+    34:3,
+    35:2,
+    36:4,
+    37:1,
+    38:2,
+    39:1,
+    40:2,
+    41:3,
+    42:4,
+    43:1,
+    44:2,
+    45:1,
+    46:2,
+    47:1,
+    48:4,
+    49:1,
+    50:3,
+    51:3,
+    52:2,
+    53:4,
+    54:1,
+    55:2,
+    56:3,
+    57:4,
+    58:1,
+    59:2,
+    60:2,
+    61:3,
+    62:4,
+    63:2,
+    64:1,
+    65:4,
+    66:3,
+    67:2,
+    68:1,
+    69:4,
+    70:2,
+    71:1,
+    72:4,
+    73:2,
+    74:3,
+    75:4,
+    76:3,
+    77:1,
+    78:4,
+    79:2,
+    80:2,
+    81:3,
+    82:4,
+    83:2,
+    84:1,
+    85:3,
+    86:4,
+    87:1,
+    88:2,
+    89:4,
+    90:3,
+    91:1,
+    92:3,
+    93:2,
+    94:4,
+    95:1,
+    96:1,
+    97:3,
+    98:3,
+    99:2,
+    100:3
+
+};
+
+
+function getCorrectAnswer(q,index) {
+
+    /*
+     * اگر خود سؤال answer داشته باشد،
+     * همان استفاده می‌شود.
+     */
+
+    if (
+        q.answer !== undefined
+    ) {
+
+        const value =
+            Number(q.answer);
+
+
+        if (
+            value >= 1 &&
+            value <= 4
+        ) {
+
+            return value - 1;
+        }
+
+
+        return value;
+    }
+
+
+    /*
+     * در غیر این صورت از کلید پاسخ استفاده می‌کنیم.
+     */
+
+    const id =
+        Number(
+            q.id !== undefined
+                ? q.id
+                : index + 1
+        );
+
+
+    const answer =
+        answers[id];
+
+
+    if (
+        answer === undefined
+    ) {
+
+        return -999;
+    }
+
+
+    return answer - 1;
+}
+
+
+/* =====================================================
+   نمایش خطا
+   ===================================================== */
+
+function showError(message) {
+
+    document.getElementById(
+        "questionText"
+    ).textContent =
+        message;
+
+    document.getElementById(
+        "options"
+    ).innerHTML =
+        "";
+
+}
+
+
+/* =====================================================
+   جلوگیری از HTML
+   ===================================================== */
+
+function escapeHTML(value) {
+
+    return String(value ?? "")
+        .replace(
+            /[&<>"']/g,
+            function(char) {
+
+                const map = {
+
+                    "&":"&amp;",
+                    "<":"&lt;",
+                    ">":"&gt;",
+                    '"':"&quot;",
+                    "'":"&#039;"
+
+                };
+
+                return map[char];
+            }
+        );
+}
+
+
+/* =====================================================
+   شروع بارگذاری
+   ===================================================== */
+
+loadQuestions();
+
+</script>
+
+</body>
+</html>

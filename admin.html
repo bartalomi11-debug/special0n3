@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>پنل مدیریت آزمون</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:Tahoma,Arial,sans-serif;
+    background:#f1f5f9;
+    color:#0f172a;
+}
+
+header{
+    background:#172554;
+    color:white;
+    padding:22px;
+    text-align:center;
+}
+
+header h1{margin:0 0 8px}
+header p{margin:0;opacity:.8}
+
+.container{
+    max-width:1100px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:22px;
+    margin-bottom:20px;
+    box-shadow:0 5px 25px rgba(0,0,0,.07);
+}
+
+h2{
+    margin-top:0;
+    font-size:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+input{
+    width:100%;
+    padding:13px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    font-family:inherit;
+    font-size:15px;
+}
+
+button{
+    border:0;
+    border-radius:10px;
+    padding:12px 18px;
+    cursor:pointer;
+    font-family:inherit;
+    font-size:14px;
+    margin:4px;
+    background:#4f46e5;
+    color:white;
+}
+
+button:hover{opacity:.9}
+
+.danger{background:#dc2626}
+.success{background:#16a34a}
+.gray{background:#64748b}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th,td{
+    border-bottom:1px solid #e2e8f0;
+    padding:12px 8px;
+    text-align:center;
+}
+
+th{
+    background:#f8fafc;
+}
+
+.empty{
+    text-align:center;
+    color:#64748b;
+    padding:25px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.stat{
+    background:#f8fafc;
+    border-radius:14px;
+    padding:18px;
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    font-size:25px;
+    margin-top:8px;
+}
+
+.message{
+    padding:12px;
+    border-radius:10px;
+    background:#ecfdf5;
+    color:#166534;
+    margin-top:10px;
+    display:none;
+}
+
+@media(max-width:700px){
+    .grid{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    table{font-size:12px}
+    th,td{padding:8px 4px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>پنل مدیریت آزمون</h1>
+    <p>مدیریت داوطلبان، تنظیمات و نتایج</p>
+</header>
+
+<div class="container">
+
+<!-- آمار -->
+<div class="card">
+    <h2>📊 آمار</h2>
+
+    <div class="stats">
+
+        <div class="stat">
+            داوطلبان
+            <strong id="candidateCount">0</strong>
+        </div>
+
+        <div class="stat">
+            آزمون‌های انجام‌شده
+            <strong id="resultCount">0</strong>
+        </div>
+
+        <div class="stat">
+            میانگین درصد
+            <strong id="averageScore">0%</strong>
+        </div>
+
+        <div class="stat">
+            تعداد سؤال
+            <strong>100</strong>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- تنظیمات -->
+<div class="card">
+
+    <h2>⚙️ تنظیمات آزمون</h2>
+
+    <div class="grid">
+
+        <div>
+            <label>عنوان آزمون</label>
+            <input
+                id="examTitle"
+                type="text"
+                value="سامانه آزمون آنلاین"
+            >
+        </div>
+
+        <div>
+            <label>مدت آزمون به دقیقه</label>
+            <input
+                id="examDuration"
+                type="number"
+                min="1"
+                value="100"
+            >
+        </div>
+
+        <div>
+            <label>حداکثر تعداد خروج از صفحه</label>
+            <input
+                id="maxExits"
+                type="number"
+                min="0"
+                value="3"
+            >
+        </div>
+
+    </div>
+
+    <button
+        class="success"
+        onclick="saveSettings()">
+        💾 ذخیره تنظیمات
+    </button>
+
+    <div
+        id="settingsMessage"
+        class="message">
+        تنظیمات ذخیره شد.
+    </div>
+
+</div>
+
+
+<!-- افزودن داوطلب -->
+<div class="card">
+
+    <h2>👤 افزودن داوطلب</h2>
+
+    <div class="grid">
+
+        <div>
+            <label>نام و نام خانوادگی</label>
+
+            <input
+                id="candidateName"
+                type="text"
+                placeholder="مثلاً علی احمدی">
+        </div>
+
+        <div>
+            <label>کد داوطلبی</label>
+
+            <input
+                id="candidateCode"
+                type="text"
+                placeholder="مثلاً 1001">
+        </div>
+
+    </div>
+
+    <button
+        class="success"
+        onclick="addCandidate()">
+        ➕ افزودن داوطلب
+    </button>
+
+</div>
+
+
+<!-- لیست داوطلبان -->
+<div class="card">
+
+    <h2>👥 لیست داوطلبان</h2>
+
+    <button
+        class="danger"
+        onclick="clearCandidates()">
+        🗑️ حذف همه داوطلبان
+    </button>
+
+    <div id="candidateTable"></div>
+
+</div>
+
+
+<!-- نتایج -->
+<div class="card">
+
+    <h2>🏆 نتایج آزمون</h2>
+
+    <button
+        class="danger"
+        onclick="clearResults()">
+        🗑️ حذف همه نتایج
+    </button>
+
+    <button
+        class="success"
+        onclick="downloadResults()">
+        📥 دریافت نتایج
+    </button>
+
+    <div id="resultTable"></div>
+
+</div>
+
+
+<!-- پاکسازی -->
+<div class="card">
+
+    <h2>⚠️ مدیریت اطلاعات</h2>
+
+    <button
+        class="danger"
+        onclick="resetAll()">
+        حذف تمام اطلاعات سامانه
+    </button>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   تنظیمات
+   ===================================================== */
+
+function getSettings(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem("admin_settings") || "{}"
+        );
+
+    }catch(e){
+
+        return {};
+    }
+}
+
+
+function saveSettings(){
+
+    const settings = {
+
+        title:
+            document.getElementById("examTitle").value.trim()
+            || "سامانه آزمون آنلاین",
+
+        duration:
+            Number(
+                document.getElementById("examDuration").value
+            ) || 100,
+
+        maxExits:
+            Number(
+                document.getElementById("maxExits").value
+            )
+
+    };
+
+
+    localStorage.setItem(
+        "admin_settings",
+        JSON.stringify(settings)
+    );
+
+
+    const message =
+        document.getElementById("settingsMessage");
+
+    message.style.display = "block";
+
+
+    setTimeout(function(){
+
+        message.style.display = "none";
+
+    },2000);
+}
+
+
+function loadSettings(){
+
+    const settings =
+        getSettings();
+
+
+    if(settings.title)
+        document.getElementById("examTitle").value =
+            settings.title;
+
+
+    if(settings.duration)
+        document.getElementById("examDuration").value =
+            settings.duration;
+
+
+    if(settings.maxExits !== undefined)
+        document.getElementById("maxExits").value =
+            settings.maxExits;
+}
+
+
+/* =====================================================
+   داوطلبان
+   ===================================================== */
+
+function getCandidates(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem("candidates") || "[]"
+        );
+
+    }catch(e){
+
+        return [];
+    }
+}
+
+
+function saveCandidates(list){
+
+    localStorage.setItem(
+        "candidates",
+        JSON.stringify(list)
+    );
+}
+
+
+function addCandidate(){
+
+    const name =
+        document.getElementById("candidateName")
+        .value.trim();
+
+
+    const code =
+        document.getElementById("candidateCode")
+        .value.trim();
+
+
+    if(!name || !code){
+
+        alert(
+            "لطفاً نام و کد داوطلب را وارد کنید."
+        );
+
+        return;
+    }
+
+
+    const candidates =
+        getCandidates();
+
+
+    const exists =
+        candidates.some(function(item){
+
+            return String(item.code) ===
+                   String(code);
+
+        });
+
+
+    if(exists){
+
+        alert(
+            "این کد داوطلب قبلاً ثبت شده است."
+        );
+
+        return;
+    }
+
+
+    candidates.push({
+
+        name:name,
+        code:code,
+        createdAt:
+            new Date().toISOString()
+
+    });
+
+
+    saveCandidates(candidates);
+
+
+    document.getElementById("candidateName")
+        .value = "";
+
+
+    document.getElementById("candidateCode")
+        .value = "";
+
+
+    renderAll();
+}
+
+
+function deleteCandidate(index){
+
+    const candidates =
+        getCandidates();
+
+
+    if(
+        !confirm(
+            "آیا از حذف این داوطلب مطمئن هستید؟"
+        )
+    ){
+
+        return;
+    }
+
+
+    candidates.splice(index,1);
+
+    saveCandidates(candidates);
+
+    renderAll();
+}
+
+
+function clearCandidates(){
+
+    if(
+        !confirm(
+            "همه داوطلبان حذف شوند؟"
+        )
+    ){
+
+        return;
+    }
+
+
+    localStorage.removeItem(
+        "candidates"
+    );
+
+
+    renderAll();
+}
+
+
+function renderCandidates(){
+
+    const list =
+        getCandidates();
+
+
+    const container =
+        document.getElementById(
+            "candidateTable"
+        );
+
+
+    if(!list.length){
+
+        container.innerHTML =
+            '<div class="empty">هنوز داوطلبی ثبت نشده است.</div>';
+
+        return;
+    }
+
+
+    let html = `
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>ردیف</th>
+                    <th>نام</th>
+                    <th>کد</th>
+                    <th>عملیات</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+    `;
+
+
+    list.forEach(function(item,index){
+
+        html += `
+
+            <tr>
+
+                <td>${index + 1}</td>
+
+                <td>
+                    ${escapeHTML(item.name)}
+                </td>
+
+                <td>
+                    ${escapeHTML(item.code)}
+                </td>
+
+                <td>
+
+                    <button
+                        class="danger"
+                        onclick="deleteCandidate(${index})">
+                        حذف
+                    </button>
+
+                </td>
+
+            </tr>
+
+        `;
+
+    });
+
+
+    html += `
+            </tbody>
+        </table>
+    `;
+
+
+    container.innerHTML = html;
+}
+
+
+/* =====================================================
+   نتایج
+   ===================================================== */
+
+function getResults(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem(
+                "exam_results"
+            ) || "[]"
+        );
+
+    }catch(e){
+
+        return [];
+    }
+}
+
+
+function clearResults(){
+
+    if(
+        !confirm(
+            "همه نتایج آزمون حذف شوند؟"
+        )
+    ){
+
+        return;
+    }
+
+
+    localStorage.removeItem(
+        "exam_results"
+    );
+
+
+    renderAll();
+}
+
+
+function renderResults(){
+
+    const results =
+        getResults();
+
+
+    const container =
+        document.getElementById(
+            "resultTable"
+        );
+
+
+    if(!results.length){
+
+        container.innerHTML =
+            '<div class="empty">هنوز نتیجه‌ای ثبت نشده است.</div>';
+
+        return;
+    }
+
+
+    let html = `
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ردیف</th>
+                    <th>نام</th>
+                    <th>کد</th>
+                    <th>صحیح</th>
+                    <th>غلط</th>
+                    <th>بدون پاسخ</th>
+                    <th>درصد</th>
+                    <th>زمان</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+    `;
+
+
+    results.forEach(function(item,index){
+
+        html += `
+
+            <tr>
+
+                <td>${index + 1}</td>
+
+                <td>
+                    ${escapeHTML(
+                        item.candidateName || ""
+                    )}
+                </td>
+
+                <td>
+                    ${escapeHTML(
+                        item.candidateCode || ""
+                    )}
+                </td>
+
+                <td>
+                    ${item.correct ?? 0}
+                </td>
+
+                <td>
+                    ${item.wrong ?? 0}
+                </td>
+
+                <td>
+                    ${item.unanswered ?? 0}
+                </td>
+
+                <td>
+                    <strong>
+                        ${item.percent ?? 0}%
+                    </strong>
+                </td>
+
+                <td>
+                    ${formatDate(item.endTime)}
+                </td>
+
+            </tr>
+
+        `;
+
+    });
+
+
+    html += `
+            </tbody>
+        </table>
+    `;
+
+
+    container.innerHTML = html;
+}
+
+
+/* =====================================================
+   آمار
+   ===================================================== */
+
+function renderStats(){
+
+    const candidates =
+        getCandidates();
+
+
+    const results =
+        getResults();
+
+
+    document.getElementById(
+        "candidateCount"
+    ).textContent =
+        candidates.length;
+
+
+    document.getElementById(
+        "resultCount"
+    ).textContent =
+        results.length;
+
+
+    if(!results.length){
+
+        document.getElementById(
+            "averageScore"
+        ).textContent = "0%";
+
+        return;
+    }
+
+
+    const total =
+        results.reduce(
+            function(sum,item){
+
+                return sum +
+                    Number(item.percent || 0);
+
+            },
+            0
+        );
+
+
+    const average =
+        total / results.length;
+
+
+    document.getElementById(
+        "averageScore"
+    ).textContent =
+        average.toFixed(1) + "%";
+}
+
+
+/* =====================================================
+   دانلود نتایج
+   ===================================================== */
+
+function downloadResults(){
+
+    const results =
+        getResults();
+
+
+    if(!results.length){
+
+        alert(
+            "هنوز نتیجه‌ای برای دریافت وجود ندارد."
+        );
+
+        return;
+    }
+
+
+    let csv =
+        "ردیف,نام,کد,صحیح,غلط,بدون پاسخ,درصد,تاریخ\n";
+
+
+    results.forEach(function(item,index){
+
+        csv += [
+
+            index + 1,
+
+            csvValue(
+                item.candidateName
+            ),
+
+            csvValue(
+                item.candidateCode
+            ),
+
+            item.correct || 0,
+
+            item.wrong || 0,
+
+            item.unanswered || 0,
+
+            item.percent || 0,
+
+            csvValue(
+                formatDate(item.endTime)
+            )
+
+        ].join(",") + "\n";
+
+    });
+
+
+    const blob =
+        new Blob(
+            ["\uFEFF" + csv],
+            {
+                type:
+                    "text/csv;charset=utf-8;"
+            }
+        );
+
+
+    const url =
+        URL.createObjectURL(blob);
+
+
+    const a =
+        document.createElement("a");
+
+
+    a.href = url;
+
+    a.download =
+        "exam-results.csv";
+
+
+    document.body.appendChild(a);
+
+    a.click();
+
+    a.remove();
+
+
+    URL.revokeObjectURL(url);
+}
+
+
+/* =====================================================
+   حذف همه اطلاعات
+   ===================================================== */
+
+function resetAll(){
+
+    if(
+        !confirm(
+            "هشدار!\nتمام داوطلبان، نتایج و تنظیمات حذف می‌شوند.\nادامه می‌دهید؟"
+        )
+    ){
+
+        return;
+    }
+
+
+    localStorage.removeItem(
+        "candidates"
+    );
+
+    localStorage.removeItem(
+        "exam_results"
+    );
+
+    localStorage.removeItem(
+        "admin_settings"
+    );
+
+
+    /*
+     * حذف وضعیت‌های آزمون
+     */
+
+    Object.keys(localStorage)
+        .forEach(function(key){
+
+            if(
+                key.startsWith(
+                    "exam_state_"
+                )
+            ){
+
+                localStorage.removeItem(key);
+            }
+
+        });
+
+
+    loadSettings();
+
+    renderAll();
+}
+
+
+/* =====================================================
+   ابزارهای کمکی
+   ===================================================== */
+
+function escapeHTML(value){
+
+    return String(value ?? "")
+        .replace(
+            /[&<>"']/g,
+            function(char){
+
+                const map = {
+
+                    "&":"&amp;",
+                    "<":"&lt;",
+                    ">":"&gt;",
+                    '"':"&quot;",
+                    "'":"&#039;"
+
+                };
+
+                return map[char];
+            }
+        );
+}
+
+
+function csvValue(value){
+
+    return '"' +
+        String(value ?? "")
+            .replace(/"/g,'""') +
+        '"';
+}
+
+
+function formatDate(value){
+
+    if(!value)
+        return "-";
+
+
+    const date =
+        new Date(value);
+
+
+    if(
+        Number.isNaN(
+            date.getTime()
+        )
+    ){
+
+        return "-";
+    }
+
+
+    return date.toLocaleString(
+        "fa-IR"
+    );
+}
+
+
+/* =====================================================
+   اجرای اولیه
+   ===================================================== */
+
+function renderAll(){
+
+    loadSettings();
+
+    renderCandidates();
+
+    renderResults();
+
+    renderStats();
+}
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    renderAll
+);
+
+</script>
+
+</body>
+</html>

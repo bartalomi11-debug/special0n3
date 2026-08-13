@@ -1,3 +1,5 @@
+"use strict";
+
 const QUESTIONS = [
   {
     id: 1,
@@ -610,4 +612,5 @@ const QUESTIONS = [
   }
 ];
 
+/* مهم: exam.html دقیقاً این متغیر را می‌خواهد */
 window.QUESTIONS = QUESTIONS;

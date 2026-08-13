@@ -1,7 +1,742 @@
-const QUESTIONS=[{"id": 1, "text": "Writing a research paper is generally ................... difficult as teaching at university; that is, their levels of difficulty are similar.", "options": ["enough", "too", "such", "as"]}, {"id": 2, "text": "Whenever I cannot understand the meaning of a word, I look it .................... in a dictionary so that I can understand what the book is saying.", "options": ["down", "after", "for", "up"]}, {"id": 3, "text": "To know his perspective on time .................... during the pandemic, and what we can do about it, I spoke to Tim Urban, the author of the blog “Wait But Why.”", "options": ["lost", "are lost", "to lose", "which loses"]}, {"id": 4, "text": "After their meeting, they became closer friends and he thought he could talk .................... about his problems to his friend.", "options": ["little", "a little", "several", "any"]}, {"id": 5, "text": "This is the process .................... the seller can be sure that the Bitcoins he or she is receiving are real.", "options": ["by which", "by that", "that", "for it"]}, {"id": 6, "text": "New Year holidays are in just a few weeks and I look forward ................... time with family.", "options": ["that spending", "to spending", "to spend", "for to spend"]}, {"id": 7, "text": ".................... for the villagers who rallied to save it, the lighthouse would have been auctioned off decades ago.", "options": ["Whether or not was", "If there wasn’t", "Were it not", "Given that"]}, {"id": 8, "text": "You always need cash flow to stay in business, .................... you often hear the phrase “cash is king.”", "options": ["because that", "that is due to", "as for what", "which is why"]}, {"id": 9, "text": "They prefer depositing their money in a single account .................... it in several different ones.", "options": ["than putting", "and to put", "to putting", "that put"]}, {"id": 10, "text": "She won’t stop talking about conspiracy theories, .................... my attempts to explain that they are false and dangerous.", "options": ["despite", "though", "in spite", "contrary"]}, {"id": 11, "text": "Each member contributes original musical compositions to the group, .................... their friend and mentor, Mr. Coleman.", "options": ["has so", "as does", "as do .............................. با شمارة داوطلبي .............................. با آگاهي كامل، يكسان و ﻪمانخساپ يﻻاب ،ﻪسلج ﻪب دورو تراك يﻻاب رد جردنم يبلطواد ةرامش اب ار دوخ يلدنﺻ ةرامش ندوباينجانب Directions: Questions 1-15 are incomplete sentences. Beneath each sentence, you will see four options (", ", ("]}, {"id": 13, "text": "Technical hiccups ...................., the evening felt very smooth and everybody was pleased and happy.", "options": ["notwithstanding", "nonetheless", "otherwise", "nevertheless"]}, {"id": 14, "text": "Last week, the UN security council passed a resolution calling for an immediate ceasefire in the war-torn region, .................... .", "options": ["where the militants didn’t manage abiding by", "where the militants have yet to abide for", "which the militants failed in abiding for", "which the militants have not abided by"]}, {"id": 15, "text": "The incident spurred him and other students into action .................... a consequential effect on their education.", "options": ["for making their campus to include indigenous students having", "to make their campus inclusive of indigenous students and have", "to make their campus including as indigenous students who have", "for making their inclusive indigenous campus by students having Part B: Vocabulary"]}, {"id": 16, "text": "Jack showed me his .................... of rare books. I was surprised to see the first edition of so many important books among them.", "options": ["collection", "percent", "focus", "tendency"]}, {"id": 17, "text": "The best time to .................... for a flood is when the sky is clear and your weekend is free, not when local officials are telling you to seal up windows and head for higher ground.", "options": ["spend", "desire", "prepare", "fight"]}, {"id": 18, "text": "The challenge is that the job looks very ...................., but it is really very complex because every detail is important.", "options": ["simple", "dangerous", "remote", "demanding"]}, {"id": 19, "text": "A manufacturer has been fined $300,000 for employing children as young as 14 to .................... “dangerous machinery” and requiring them to work more hours than the law allows.", "options": ["oppose", "operate", "reward", "return"]}, {"id": 20, "text": "The idea that it is “too ....................” to eat healthy food and that junk food is cheaper is nonsense.", "options": ["proud", "confident", "expensive", "complete"]}, {"id": 21, "text": "Critics believe that Jackson’s complete lack of .................... in presenting his ideas suggests that he is not a serious candidate.", "options": ["distaste", "organization", "complication", "digression Directions: Questions 16-35 are incomplete sentences. Beneath each sentence, you will see four words or phrases marked ("]}, {"id": 23, "text": "Slave-owners worked their slaves hard, demanded complete .................... from them, and disciplined those who ignored their owners’ orders.", "options": ["exchange", "destiny", "obedience", "dominance"]}, {"id": 24, "text": "The hardwood floors in our house are badly .................... in several places because my children pushed and pulled the heavy furniture as they were playing.", "options": ["paved", "scratched", "constructed", "evaporated"]}, {"id": 25, "text": "If the territorial .................... of this country is threatened, we will certainly use all the means at our disposal to protect it.", "options": ["integrity", "dispute", "commonplace", "shelter"]}, {"id": 26, "text": "Don’t let a/an .................... matter like applesauce grow a millimeter larger than it has to. Be diplomatic and ask your father to order both varieties.", "options": ["trifling", "detailed", "disinterested", "unconcerned"]}, {"id": 27, "text": "Though not many citizens would openly sympathize with their motives or methods, the courage of the rebels has won .................... admiration at all levels in Britain.", "options": ["protruding", "sorted", "invisible", "sneaking"]}, {"id": 28, "text": "The age of the automobile and the truck have put this historic crossroad city between East and West into an almost .................... traffic jam.", "options": ["retrospective", "submissive", "permanent", "pedantic"]}, {"id": 29, "text": "After they .................... into a new policy without thinking it through, the U.N. officials tried to rationalize it in vain.", "options": ["apprehended", "burgeoned", "exacerbated", "blundered"]}, {"id": 30, "text": "As Australian officials planned to cut Medicare by at least $250 billion as part of their proposal to balance the budget by the year 2024, social activists in healthcare .................... alarm.", "options": ["registered", "documented", "validated", "inscribed"]}, {"id": 31, "text": "Her stubborn .................... may be one reason for her entrance into the New York City Marathon. Not everyone believes it’s wise for her to run so soon after that terrible accident.", "options": ["strike", "streak", "stripe", "staple"]}, {"id": 32, "text": "In many cases, the statute does not say precisely what agencies should do, giving them considerable .................... in interpreting the law and developing regulations.", "options": ["latitude", "remuneration", "blandishment", "conflation"]}, {"id": 33, "text": "Political analysts said that it reflected the .................... nature of this rebellion—that is, it was not a well-formed coup but a protest without a plan or internal organization.", "options": ["facetious", "inchoate", "peremptory", "panegyric"]}, {"id": 34, "text": "If you stay up late at night, you may fall into a loop of ....................—or repetitive intrusive thoughts with no satisfactory outcome.", "options": ["circumlocution", "insomnia", "rumination", "debacle"]}, {"id": 41, "text": "A: Hey, Joe! Do you know who .................... (41) about Vicky’s surprise retirement party? B: Well, I’m not sure; but if I had to guess, I think it would be Harry. A: So do I! The guy’s so talkative; .................... (42) in his mouth! B: I think we must talk to him. After all, it’s not his first time, and someone has to address the .................... (43) in the room! Question 41:", "options": ["rang a bell", "poured the water", "spilled the beans", "cleaned the clock"]}, {"id": 42, "text": "A: Hey, Joe! Do you know who spilled the beans about Vicky’s surprise retirement party? B: Well, I’m not sure; but if I had to guess, I think it would be Harry. A: So do I! The guy’s so talkative; .................... (42) in his mouth! B: I think we must talk to him. After all, it’s not his first time, and someone has to address the .................... (43) in the room! Question 42:", "options": ["food wouldn’t stay", "snow wouldn’t thaw", "tongue wouldn’t turn", "butter wouldn’t melt"]}, {"id": 43, "text": "A: Hey, Joe! Do you know who spilled the beans about Vicky’s surprise retirement party? B: Well, I’m not sure; but if I had to guess, I think it would be Harry. A: So do I! The guy’s so talkative; butter wouldn’t melt in his mouth! B: I think we must talk to him. After all, it’s not his first time, and someone has to address the .................... (43) in the room! Question 43:", "options": ["elephant", "person", "bull", "problem"]}, {"id": 44, "text": "A: I’m so glad that Dave and Mike have decided to forget about the past and .................... (44). B: Same here! They were such good friends before that meaningless argument. A: That’s right! I remember that they used to be thick as .................... (45) in the old days. Question 44:", "options": ["throw down the gauntlet", "bury the hatchet", "line their pockets", "make ends meet"]}, {"id": 45, "text": "A: I’m so glad that Dave and Mike have decided to forget about the past and bury the hatchet. B: Same here! They were such good friends before that meaningless argument. A: That’s right! I remember that they used to be thick as .................... (45) in the old days. Question 45:", "options": ["thieves", "grease", "soup", "thorns The relationship between media violence exposure and aggressive behavior has been the subject of social, political, and scientific attention for decades. Experimental studies of exposure to violent television and video games .................... (46) short-term increases in aggressive behavior in children, adolescents, and adults. Also, correlational studies suggest a longer-term .................... (47) between media violence exposure and aggressive behavior in the natural environment. The importance of studying the relationship between media violence exposure and aggressive behavior has increased with the evolution of more complex and realistic media formats (e.g., from television to video games), which has raised concerns about the .................... (48) of early studies of television-based media violence exposure to modern-day television special effects and realistic interactive video games. Home-based video games, for example, have increased .................... (49) in sophistication, realism, and prevalence during the past 20 years. This growth and change in media formats .................... (50) more modern research on the impact of media violence exposure in general and video game violence in particular. Studies of video game violence exposure have typically shown a .................... (51) with aggression in samples of children and adolescents. There are good reasons, such as the participant nature of video-game playing as compared to the more passive nature of viewing television, to .................... (52) that video game violence exposure may be more strongly related to aggressive behavior than television violence exposure. One early experimental study found no difference between the impact of video game vs. televised violence on short-term aggressive behavior in children (both types of media violence .................... (53) short-term aggressive behavior). However, there has been a considerable increase in the realism and .................... (54) of violence in video games since that study was conducted. Surprisingly, however, there has been .................... (55) study comparing television and video game exposure."]}, {"id": 46, "text": "Question 46: Choose the option that best fits blank (46).", "options": ["has shown", "have shown", "shown", "shows The relationship between media violence exposure and aggressive behavior has been the subject of social, political, and scientific attention for decades. Experimental studies of exposure to violent television and video games .................... (46) short-term increases in aggressive behavior in children, adolescents, and adults. Also, correlational studies suggest a longer-term .................... (47) between media violence exposure and aggressive behavior in the natural environment. The importance of studying the relationship between media violence exposure and aggressive behavior has increased with the evolution of more complex and realistic media formats (e.g., from television to video games), which has raised concerns about the .................... (48) of early studies of television-based media violence exposure to modern-day television special effects and realistic interactive video games. Home-based video games, for example, have increased .................... (49) in sophistication, realism, and prevalence during the past 20 years. This growth and change in media formats .................... (50) more modern research on the impact of media violence exposure in general and video game violence in particular. Studies of video game violence exposure have typically shown a .................... (51) with aggression in samples of children and adolescents. There are good reasons, such as the participant nature of video-game playing as compared to the more passive nature of viewing television, to .................... (52) that video game violence exposure may be more strongly related to aggressive behavior than television violence exposure. One early experimental study found no difference between the impact of video game vs. televised violence on short-term aggressive behavior in children (both types of media violence .................... (53) short-term aggressive behavior). However, there has been a considerable increase in the realism and .................... (54) of violence in video games since that study was conducted. Surprisingly, however, there has been .................... (55) study comparing television and video game exposure."]}, {"id": 47, "text": "Question 47: Choose the option that best fits blank (47).", "options": ["association", "determination", "negligence", "confidence The relationship between media violence exposure and aggressive behavior has been the subject of social, political, and scientific attention for decades. Experimental studies of exposure to violent television and video games .................... (46) short-term increases in aggressive behavior in children, adolescents, and adults. Also, correlational studies suggest a longer-term .................... (47) between media violence exposure and aggressive behavior in the natural environment. The importance of studying the relationship between media violence exposure and aggressive behavior has increased with the evolution of more complex and realistic media formats (e.g., from television to video games), which has raised concerns about the .................... (48) of early studies of television-based media violence exposure to modern-day television special effects and realistic interactive video games. Home-based video games, for example, have increased .................... (49) in sophistication, realism, and prevalence during the past 20 years. This growth and change in media formats .................... (50) more modern research on the impact of media violence exposure in general and video game violence in particular. Studies of video game violence exposure have typically shown a .................... (51) with aggression in samples of children and adolescents. There are good reasons, such as the participant nature of video-game playing as compared to the more passive nature of viewing television, to .................... (52) that video game violence exposure may be more strongly related to aggressive behavior than television violence exposure. One early experimental study found no difference between the impact of video game vs. televised violence on short-term aggressive behavior in children (both types of media violence .................... (53) short-term aggressive behavior). However, there has been a considerable increase in the realism and .................... (54) of violence in video games since that study was conducted. Surprisingly, however, there has been .................... (55) study comparing television and video game exposure."]}, {"id": 48, "text": "Question 48: Choose the option that best fits blank (48).", "options": ["felicity", "publicity", "sincerity", "applicability The relationship between media violence exposure and aggressive behavior has been the subject of social, political, and scientific attention for decades. Experimental studies of exposure to violent television and video games .................... (46) short-term increases in aggressive behavior in children, adolescents, and adults. Also, correlational studies suggest a longer-term .................... (47) between media violence exposure and aggressive behavior in the natural environment. The importance of studying the relationship between media violence exposure and aggressive behavior has increased with the evolution of more complex and realistic media formats (e.g., from television to video games), which has raised concerns about the .................... (48) of early studies of television-based media violence exposure to modern-day television special effects and realistic interactive video games. Home-based video games, for example, have increased .................... (49) in sophistication, realism, and prevalence during the past 20 years. This growth and change in media formats .................... (50) more modern research on the impact of media violence exposure in general and video game violence in particular. Studies of video game violence exposure have typically shown a .................... (51) with aggression in samples of children and adolescents. There are good reasons, such as the participant nature of video-game playing as compared to the more passive nature of viewing television, to .................... (52) that video game violence exposure may be more strongly related to aggressive behavior than television violence exposure. One early experimental study found no difference between the impact of video game vs. televised violence on short-term aggressive behavior in children (both types of media violence .................... (53) short-term aggressive behavior). However, there has been a considerable increase in the realism and .................... (54) of violence in video games since that study was conducted. Surprisingly, however, there has been .................... (55) study comparing television and video game exposure."]}, {"id": 49, "text": "Question 49: Choose the option that best fits blank (49).", "options": ["dramatically", "hardly", "legally", "densely The relationship between media violence exposure and aggressive behavior has been the subject of social, political, and scientific attention for decades. Experimental studies of exposure to violent television and video games .................... (46) short-term increases in aggressive behavior in children, adolescents, and adults. Also, correlational studies suggest a longer-term .................... (47) between media violence exposure and aggressive behavior in the natural environment. The importance of studying the relationship between media violence exposure and aggressive behavior has increased with the evolution of more complex and realistic media formats (e.g., from television to video games), which has raised concerns about the .................... (48) of early studies of television-based media violence exposure to modern-day television special effects and realistic interactive video games. Home-based video games, for example, have increased .................... (49) in sophistication, realism, and prevalence during the past 20 years. This growth and change in media formats .................... (50) more modern research on the impact of media violence exposure in general and video game violence in particular. Studies of video game violence exposure have typically shown a .................... (51) with aggression in samples of children and adolescents. There are good reasons, such as the participant nature of video-game playing as compared to the more passive nature of viewing television, to .................... (52) that video game violence exposure may be more strongly related to aggressive behavior than television violence exposure. One early experimental study found no difference between the impact of video game vs. televised violence on short-term aggressive behavior in children (both types of media violence .................... (53) short-term aggressive behavior). However, there has been a considerable increase in the realism and .................... (54) of violence in video games since that study was conducted. Surprisingly, however, there has been .................... (55) study comparing television and video game exposure."]}, {"id": 50, "text": "Question 50: Choose the option that best fits blank (50).", "options": ["have called for lead to", "have called to lead for", "has led to calls for", "has lead for called to The relationship between media violence exposure and aggressive behavior has been the subject of social, political, and scientific attention for decades. Experimental studies of exposure to violent television and video games .................... (46) short-term increases in aggressive behavior in children, adolescents, and adults. Also, correlational studies suggest a longer-term .................... (47) between media violence exposure and aggressive behavior in the natural environment. The importance of studying the relationship between media violence exposure and aggressive behavior has increased with the evolution of more complex and realistic media formats (e.g., from television to video games), which has raised concerns about the .................... (48) of early studies of television-based media violence exposure to modern-day television special effects and realistic interactive video games. Home-based video games, for example, have increased .................... (49) in sophistication, realism, and prevalence during the past 20 years. This growth and change in media formats .................... (50) more modern research on the impact of media violence exposure in general and video game violence in particular. Studies of video game violence exposure have typically shown a .................... (51) with aggression in samples of children and adolescents. There are good reasons, such as the participant nature of video-game playing as compared to the more passive nature of viewing television, to .................... (52) that video game violence exposure may be more strongly related to aggressive behavior than television violence exposure. One early experimental study found no difference between the impact of video game vs. televised violence on short-term aggressive behavior in children (both types of media violence .................... (53) short-term aggressive behavior). However, there has been a considerable increase in the realism and .................... (54) of violence in video games since that study was conducted. Surprisingly, however, there has been .................... (55) study comparing television and video game exposure."]}, {"id": 51, "text": "Question 51: Choose the option that best fits blank (51).", "options": ["relationship significantly positive", "positively relationship significant", "significant positive relationship", "significant relationship positively The relationship between media violence exposure and aggressive behavior has been the subject of social, political, and scientific attention for decades. Experimental studies of exposure to violent television and video games .................... (46) short-term increases in aggressive behavior in children, adolescents, and adults. Also, correlational studies suggest a longer-term .................... (47) between media violence exposure and aggressive behavior in the natural environment. The importance of studying the relationship between media violence exposure and aggressive behavior has increased with the evolution of more complex and realistic media formats (e.g., from television to video games), which has raised concerns about the .................... (48) of early studies of television-based media violence exposure to modern-day television special effects and realistic interactive video games. Home-based video games, for example, have increased .................... (49) in sophistication, realism, and prevalence during the past 20 years. This growth and change in media formats .................... (50) more modern research on the impact of media violence exposure in general and video game violence in particular. Studies of video game violence exposure have typically shown a .................... (51) with aggression in samples of children and adolescents. There are good reasons, such as the participant nature of video-game playing as compared to the more passive nature of viewing television, to .................... (52) that video game violence exposure may be more strongly related to aggressive behavior than television violence exposure. One early experimental study found no difference between the impact of video game vs. televised violence on short-term aggressive behavior in children (both types of media violence .................... (53) short-term aggressive behavior). However, there has been a considerable increase in the realism and .................... (54) of violence in video games since that study was conducted. Surprisingly, however, there has been .................... (55) study comparing television and video game exposure."]}, {"id": 52, "text": "Question 52: Choose the option that best fits blank (52).", "options": ["exasperate", "hypothesize", "incarcerate", "evade The relationship between media violence exposure and aggressive behavior has been the subject of social, political, and scientific attention for decades. Experimental studies of exposure to violent television and video games .................... (46) short-term increases in aggressive behavior in children, adolescents, and adults. Also, correlational studies suggest a longer-term .................... (47) between media violence exposure and aggressive behavior in the natural environment. The importance of studying the relationship between media violence exposure and aggressive behavior has increased with the evolution of more complex and realistic media formats (e.g., from television to video games), which has raised concerns about the .................... (48) of early studies of television-based media violence exposure to modern-day television special effects and realistic interactive video games. Home-based video games, for example, have increased .................... (49) in sophistication, realism, and prevalence during the past 20 years. This growth and change in media formats .................... (50) more modern research on the impact of media violence exposure in general and video game violence in particular. Studies of video game violence exposure have typically shown a .................... (51) with aggression in samples of children and adolescents. There are good reasons, such as the participant nature of video-game playing as compared to the more passive nature of viewing television, to .................... (52) that video game violence exposure may be more strongly related to aggressive behavior than television violence exposure. One early experimental study found no difference between the impact of video game vs. televised violence on short-term aggressive behavior in children (both types of media violence .................... (53) short-term aggressive behavior). However, there has been a considerable increase in the realism and .................... (54) of violence in video games since that study was conducted. Surprisingly, however, there has been .................... (55) study comparing television and video game exposure."]}, {"id": 53, "text": "Question 53: Choose the option that best fits blank (53).", "options": ["to related were", "were to related", "were to relate", "were related to The relationship between media violence exposure and aggressive behavior has been the subject of social, political, and scientific attention for decades. Experimental studies of exposure to violent television and video games .................... (46) short-term increases in aggressive behavior in children, adolescents, and adults. Also, correlational studies suggest a longer-term .................... (47) between media violence exposure and aggressive behavior in the natural environment. The importance of studying the relationship between media violence exposure and aggressive behavior has increased with the evolution of more complex and realistic media formats (e.g., from television to video games), which has raised concerns about the .................... (48) of early studies of television-based media violence exposure to modern-day television special effects and realistic interactive video games. Home-based video games, for example, have increased .................... (49) in sophistication, realism, and prevalence during the past 20 years. This growth and change in media formats .................... (50) more modern research on the impact of media violence exposure in general and video game violence in particular. Studies of video game violence exposure have typically shown a .................... (51) with aggression in samples of children and adolescents. There are good reasons, such as the participant nature of video-game playing as compared to the more passive nature of viewing television, to .................... (52) that video game violence exposure may be more strongly related to aggressive behavior than television violence exposure. One early experimental study found no difference between the impact of video game vs. televised violence on short-term aggressive behavior in children (both types of media violence .................... (53) short-term aggressive behavior). However, there has been a considerable increase in the realism and .................... (54) of violence in video games since that study was conducted. Surprisingly, however, there has been .................... (55) study comparing television and video game exposure."]}, {"id": 54, "text": "Question 54: Choose the option that best fits blank (54).", "options": ["magnitude", "serenity", "mutilation", "sorority The relationship between media violence exposure and aggressive behavior has been the subject of social, political, and scientific attention for decades. Experimental studies of exposure to violent television and video games .................... (46) short-term increases in aggressive behavior in children, adolescents, and adults. Also, correlational studies suggest a longer-term .................... (47) between media violence exposure and aggressive behavior in the natural environment. The importance of studying the relationship between media violence exposure and aggressive behavior has increased with the evolution of more complex and realistic media formats (e.g., from television to video games), which has raised concerns about the .................... (48) of early studies of television-based media violence exposure to modern-day television special effects and realistic interactive video games. Home-based video games, for example, have increased .................... (49) in sophistication, realism, and prevalence during the past 20 years. This growth and change in media formats .................... (50) more modern research on the impact of media violence exposure in general and video game violence in particular. Studies of video game violence exposure have typically shown a .................... (51) with aggression in samples of children and adolescents. There are good reasons, such as the participant nature of video-game playing as compared to the more passive nature of viewing television, to .................... (52) that video game violence exposure may be more strongly related to aggressive behavior than television violence exposure. One early experimental study found no difference between the impact of video game vs. televised violence on short-term aggressive behavior in children (both types of media violence .................... (53) short-term aggressive behavior). However, there has been a considerable increase in the realism and .................... (54) of violence in video games since that study was conducted. Surprisingly, however, there has been .................... (55) study comparing television and video game exposure."]}, {"id": 55, "text": "Question 55: Choose the option that best fits blank (55).", "options": ["very recent little", "very little recent", "little very recently", "very little recently Roald Amundsen was a key figure in polar exploration. Born to a family of ship-owners and inspired by Fridtjof Nansen and Sir John Franklin, he grew up immersed in the sea trade. In 1903, Amundsen led the first expedition to successfully traverse the Northwest Passage. During two winters spent at King William Island, he picked up invaluable tips from local Inuit people. Many successful expeditions followed, including the race to the South Pole with Robert Falcon Scott."]}, {"id": 56, "text": "In the 1920s, Amundsen had his mind set on an aerial North Pole expedition. The first attempt in 1923 failed—when trying to fly from Alaska to Spitsbergen, the aircraft was damaged and Amundsen and his companion Oskar Omdal of the Royal Norwegian Navy abandoned the journey. In 1925, Amundsen and American Lincoln Ellsworth tried to reach the North Pole by air. When the aircraft was damaged, the crew worked for more than three weeks to clean up an airstrip to take off from ice. They shoveled 600 tons of ice while consuming only one pound of daily food rations. They returned triumphant when everyone thought they had been lost forever. In 1926, Amundsen and 15 other men, led by aeronautical engineer Umberto Nobile, made the first crossing of the Arctic in the airship Norge. They left Spitsbergen on 11 May 1926, flew over the North Pole on 12 May, and landed in Alaska the following day. Amundsen and Wisting also became the first men to have reached both geographical poles. The underlined word “he” in paragraph 1 refers to .................... .", "options": ["Nansen", "Franklin", "Amundsen", "King William Roald Amundsen was a key figure in polar exploration. Born to a family of ship-owners and inspired by Fridtjof Nansen and Sir John Franklin, he grew up immersed in the sea trade. In 1903, Amundsen led the first expedition to successfully traverse the Northwest Passage. During two winters spent at King William Island, he picked up invaluable tips from local Inuit people. Many successful expeditions followed, including the race to the South Pole with Robert Falcon Scott."]}, {"id": 57, "text": "In the 1920s, Amundsen had his mind set on an aerial North Pole expedition. The first attempt in 1923 failed—when trying to fly from Alaska to Spitsbergen, the aircraft was damaged and Amundsen and his companion Oskar Omdal of the Royal Norwegian Navy abandoned the journey. In 1925, Amundsen and American Lincoln Ellsworth tried to reach the North Pole by air. When the aircraft was damaged, the crew worked for more than three weeks to clean up an airstrip to take off from ice. They shoveled 600 tons of ice while consuming only one pound of daily food rations. They returned triumphant when everyone thought they had been lost forever. In 1926, Amundsen and 15 other men, led by aeronautical engineer Umberto Nobile, made the first crossing of the Arctic in the airship Norge. They left Spitsbergen on 11 May 1926, flew over the North Pole on 12 May, and landed in Alaska the following day. Amundsen and Wisting also became the first men to have reached both geographical poles. The underlined word “traverse” in paragraph 1 is closest in meaning to .................... .", "options": ["name", "discover", "swim", "cross Roald Amundsen was a key figure in polar exploration. Born to a family of ship-owners and inspired by Fridtjof Nansen and Sir John Franklin, he grew up immersed in the sea trade. In 1903, Amundsen led the first expedition to successfully traverse the Northwest Passage. During two winters spent at King William Island, he picked up invaluable tips from local Inuit people. Many successful expeditions followed, including the race to the South Pole with Robert Falcon Scott."]}, {"id": 58, "text": "In the 1920s, Amundsen had his mind set on an aerial North Pole expedition. The first attempt in 1923 failed—when trying to fly from Alaska to Spitsbergen, the aircraft was damaged and Amundsen and his companion Oskar Omdal of the Royal Norwegian Navy abandoned the journey. In 1925, Amundsen and American Lincoln Ellsworth tried to reach the North Pole by air. When the aircraft was damaged, the crew worked for more than three weeks to clean up an airstrip to take off from ice. They shoveled 600 tons of ice while consuming only one pound of daily food rations. They returned triumphant when everyone thought they had been lost forever. In 1926, Amundsen and 15 other men, led by aeronautical engineer Umberto Nobile, made the first crossing of the Arctic in the airship Norge. They left Spitsbergen on 11 May 1926, flew over the North Pole on 12 May, and landed in Alaska the following day. Amundsen and Wisting also became the first men to have reached both geographical poles. According to paragraph 2, which of the following shows the correct chronological order of events?", "options": ["The crew shoveling 600 tons of ice in order to take off after Amundsen and Omdal trying to fly to Spitsbergen for the first time", "Amundsen and Ellsworth trying to reach the North Pole by air after the group, led by Umberto Nobile, landing in Alaska", "Amundsen and 15 other men crossing the Arctic by Norge before Amundsen deciding to go on an aerial North Pole expedition", "Nobile making the first crossing of the Arctic in Norge before Amundsen and his Norwegian companion’s first aerial North Pole expedition failing Roald Amundsen was a key figure in polar exploration. Born to a family of ship-owners and inspired by Fridtjof Nansen and Sir John Franklin, he grew up immersed in the sea trade. In 1903, Amundsen led the first expedition to successfully traverse the Northwest Passage. During two winters spent at King William Island, he picked up invaluable tips from local Inuit people. Many successful expeditions followed, including the race to the South Pole with Robert Falcon Scott."]}, {"id": 59, "text": "In the 1920s, Amundsen had his mind set on an aerial North Pole expedition. The first attempt in 1923 failed—when trying to fly from Alaska to Spitsbergen, the aircraft was damaged and Amundsen and his companion Oskar Omdal of the Royal Norwegian Navy abandoned the journey. In 1925, Amundsen and American Lincoln Ellsworth tried to reach the North Pole by air. When the aircraft was damaged, the crew worked for more than three weeks to clean up an airstrip to take off from ice. They shoveled 600 tons of ice while consuming only one pound of daily food rations. They returned triumphant when everyone thought they had been lost forever. In 1926, Amundsen and 15 other men, led by aeronautical engineer Umberto Nobile, made the first crossing of the Arctic in the airship Norge. They left Spitsbergen on 11 May 1926, flew over the North Pole on 12 May, and landed in Alaska the following day. Amundsen and Wisting also became the first men to have reached both geographical poles. All of the following words are mentioned in the passage EXCEPT .................... .", "options": ["Inuit", "flight", "journey", "triumphant Roald Amundsen was a key figure in polar exploration. Born to a family of ship-owners and inspired by Fridtjof Nansen and Sir John Franklin, he grew up immersed in the sea trade. In 1903, Amundsen led the first expedition to successfully traverse the Northwest Passage. During two winters spent at King William Island, he picked up invaluable tips from local Inuit people. Many successful expeditions followed, including the race to the South Pole with Robert Falcon Scott."]}, {"id": 60, "text": "In the 1920s, Amundsen had his mind set on an aerial North Pole expedition. The first attempt in 1923 failed—when trying to fly from Alaska to Spitsbergen, the aircraft was damaged and Amundsen and his companion Oskar Omdal of the Royal Norwegian Navy abandoned the journey. In 1925, Amundsen and American Lincoln Ellsworth tried to reach the North Pole by air. When the aircraft was damaged, the crew worked for more than three weeks to clean up an airstrip to take off from ice. They shoveled 600 tons of ice while consuming only one pound of daily food rations. They returned triumphant when everyone thought they had been lost forever. In 1926, Amundsen and 15 other men, led by aeronautical engineer Umberto Nobile, made the first crossing of the Arctic in the airship Norge. They left Spitsbergen on 11 May 1926, flew over the North Pole on 12 May, and landed in Alaska the following day. Amundsen and Wisting also became the first men to have reached both geographical poles. According to the passage, which of the following statements is true?", "options": ["Roald Amundsen was born into a family with little background in sea trade.", "Until 1920, no man had successfully reached both geographical poles on record.", "On his way to the Northwest Passage, Amundsen collected lots of money from local people.", "Amundsen and Omdal managed to successfully fly to Spitsbergen in their first attempt. Earth’s atmosphere is composed almost entirely of the gases nitrogen (78%) and oxygen (21%), but several gases that exist in trace amounts—concentrations of less than a fraction of a percent—have a great impact on Earth’s climate. These are greenhouse gases—gases that allow solar radiation to pass through the atmosphere and warm the Earth, but that absorb the heat that the Earth radiates back to space, trapping it as a blanket traps body heat to keep us warm on a cold night. Small changes in the atmospheric concentration of these gases can lead to big changes in Earth’s temperature and climate, making the difference between ice ages, when mastodons roamed the Earth, and the sweltering heat in which the dinosaurs lived. Without the heating caused by the greenhouse effect, Earth’s average surface temperature would be only about −18 °C. On Venus, the very high concentration of carbon dioxide in the atmosphere causes an extreme greenhouse effect resulting in surface temperatures as high as 450 °C."]}, {"id": 61, "text": "Although the greenhouse effect is a naturally occurring phenomenon, the effect is intensified by the emission of greenhouse gases into the atmosphere as the result of human activity. From the beginning of the Industrial Revolution through the end of the 20th century, the amount of carbon dioxide in the atmosphere increased by roughly 30 percent and the amount of methane more than doubled. Scientists have predicted that human-related increases in atmospheric carbon dioxide and other greenhouse gases could lead by the end of the 21st century to an increase in the global average temperature of 0.3 to 4.8 °C relative to the 1986–2005 average. This global warming will alter Earth’s climates and disrupt food production in certain regions. All of the following are mentioned in paragraph 1 EXCEPT .................... .", "options": ["a gas that can lead to the greenhouse effect", "two gases that are part of Earth’s atmosphere", "a gas other than carbon dioxide found in Venus’ atmosphere", "the way greenhouse gases contribute to warming of the Earth Earth’s atmosphere is composed almost entirely of the gases nitrogen (78%) and oxygen (21%), but several gases that exist in trace amounts—concentrations of less than a fraction of a percent—have a great impact on Earth’s climate. These are greenhouse gases—gases that allow solar radiation to pass through the atmosphere and warm the Earth, but that absorb the heat that the Earth radiates back to space, trapping it as a blanket traps body heat to keep us warm on a cold night. Small changes in the atmospheric concentration of these gases can lead to big changes in Earth’s temperature and climate, making the difference between ice ages, when mastodons roamed the Earth, and the sweltering heat in which the dinosaurs lived. Without the heating caused by the greenhouse effect, Earth’s average surface temperature would be only about −18 °C. On Venus, the very high concentration of carbon dioxide in the atmosphere causes an extreme greenhouse effect resulting in surface temperatures as high as 450 °C."]}, {"id": 62, "text": "Although the greenhouse effect is a naturally occurring phenomenon, the effect is intensified by the emission of greenhouse gases into the atmosphere as the result of human activity. From the beginning of the Industrial Revolution through the end of the 20th century, the amount of carbon dioxide in the atmosphere increased by roughly 30 percent and the amount of methane more than doubled. Scientists have predicted that human-related increases in atmospheric carbon dioxide and other greenhouse gases could lead by the end of the 21st century to an increase in the global average temperature of 0.3 to 4.8 °C relative to the 1986–2005 average. This global warming will alter Earth’s climates and disrupt food production in certain regions. Which of the following best describes the scientists’ prediction about people’s life on Earth at the end of the 21st century mentioned in paragraph 2?", "options": ["Unimportant", "Hopeful", "Ambivalent", "Alarming Earth’s atmosphere is composed almost entirely of the gases nitrogen (78%) and oxygen (21%), but several gases that exist in trace amounts—concentrations of less than a fraction of a percent—have a great impact on Earth’s climate. These are greenhouse gases—gases that allow solar radiation to pass through the atmosphere and warm the Earth, but that absorb the heat that the Earth radiates back to space, trapping it as a blanket traps body heat to keep us warm on a cold night. Small changes in the atmospheric concentration of these gases can lead to big changes in Earth’s temperature and climate, making the difference between ice ages, when mastodons roamed the Earth, and the sweltering heat in which the dinosaurs lived. Without the heating caused by the greenhouse effect, Earth’s average surface temperature would be only about −18 °C. On Venus, the very high concentration of carbon dioxide in the atmosphere causes an extreme greenhouse effect resulting in surface temperatures as high as 450 °C."]}, {"id": 63, "text": "Although the greenhouse effect is a naturally occurring phenomenon, the effect is intensified by the emission of greenhouse gases into the atmosphere as the result of human activity. From the beginning of the Industrial Revolution through the end of the 20th century, the amount of carbon dioxide in the atmosphere increased by roughly 30 percent and the amount of methane more than doubled. Scientists have predicted that human-related increases in atmospheric carbon dioxide and other greenhouse gases could lead by the end of the 21st century to an increase in the global average temperature of 0.3 to 4.8 °C relative to the 1986–2005 average. This global warming will alter Earth’s climates and disrupt food production in certain regions. Which of the following pairs of techniques is used in paragraph 2?", "options": ["Statistics and Anecdote", "Cause & effect and Statistics", "Definition and Cause & effect", "Anecdote and Definition Earth’s atmosphere is composed almost entirely of the gases nitrogen (78%) and oxygen (21%), but several gases that exist in trace amounts—concentrations of less than a fraction of a percent—have a great impact on Earth’s climate. These are greenhouse gases—gases that allow solar radiation to pass through the atmosphere and warm the Earth, but that absorb the heat that the Earth radiates back to space, trapping it as a blanket traps body heat to keep us warm on a cold night. Small changes in the atmospheric concentration of these gases can lead to big changes in Earth’s temperature and climate, making the difference between ice ages, when mastodons roamed the Earth, and the sweltering heat in which the dinosaurs lived. Without the heating caused by the greenhouse effect, Earth’s average surface temperature would be only about −18 °C. On Venus, the very high concentration of carbon dioxide in the atmosphere causes an extreme greenhouse effect resulting in surface temperatures as high as 450 °C."]}, {"id": 64, "text": "Although the greenhouse effect is a naturally occurring phenomenon, the effect is intensified by the emission of greenhouse gases into the atmosphere as the result of human activity. From the beginning of the Industrial Revolution through the end of the 20th century, the amount of carbon dioxide in the atmosphere increased by roughly 30 percent and the amount of methane more than doubled. Scientists have predicted that human-related increases in atmospheric carbon dioxide and other greenhouse gases could lead by the end of the 21st century to an increase in the global average temperature of 0.3 to 4.8 °C relative to the 1986–2005 average. This global warming will alter Earth’s climates and disrupt food production in certain regions. The passage provides sufficient information to answer which of the following questions? I. What is the most important human activity contributing to the greenhouse effect now? II. What were the causes for the extinction of mastodons and dinosaurs? III. Is the phenomenon known as greenhouse effect confined to planet Earth?", "options": ["Only III", "I and III", "Only II", "I and II Earth’s atmosphere is composed almost entirely of the gases nitrogen (78%) and oxygen (21%), but several gases that exist in trace amounts—concentrations of less than a fraction of a percent—have a great impact on Earth’s climate. These are greenhouse gases—gases that allow solar radiation to pass through the atmosphere and warm the Earth, but that absorb the heat that the Earth radiates back to space, trapping it as a blanket traps body heat to keep us warm on a cold night. Small changes in the atmospheric concentration of these gases can lead to big changes in Earth’s temperature and climate, making the difference between ice ages, when mastodons roamed the Earth, and the sweltering heat in which the dinosaurs lived. Without the heating caused by the greenhouse effect, Earth’s average surface temperature would be only about −18 °C. On Venus, the very high concentration of carbon dioxide in the atmosphere causes an extreme greenhouse effect resulting in surface temperatures as high as 450 °C."]}, {"id": 65, "text": "Although the greenhouse effect is a naturally occurring phenomenon, the effect is intensified by the emission of greenhouse gases into the atmosphere as the result of human activity. From the beginning of the Industrial Revolution through the end of the 20th century, the amount of carbon dioxide in the atmosphere increased by roughly 30 percent and the amount of methane more than doubled. Scientists have predicted that human-related increases in atmospheric carbon dioxide and other greenhouse gases could lead by the end of the 21st century to an increase in the global average temperature of 0.3 to 4.8 °C relative to the 1986–2005 average. This global warming will alter Earth’s climates and disrupt food production in certain regions. According to the passage, which of the following statements is NOT true?", "options": ["Data pertaining to the global average temperature in 1986–2005 on Earth have been collected and are now available.", "Minor changes in the atmospheric concentration of greenhouse gases can result in significant alterations to Earth’s temperature and climate.", "Although greenhouse gases constitute a small fraction of Earth’s atmosphere, they exert a significant impact on Earth’s climate.", "Throughout the course of the 20th century, the concentration of carbon dioxide in the Earth’s atmosphere approximately doubled. The English Renaissance was a cultural and artistic movement in England dating from the late 15th to the early 17th century. It is associated with the pan-European Renaissance that is usually regarded as beginning in Italy in the late 14th century. [1] The beginning of the English Renaissance is often taken, as a convenience, to be 1485, when the Battle of Bosworth Field ended the Wars of the Roses and inaugurated the Tudor Dynasty. Renaissance style and ideas, however, were slow to penetrate England, and the Elizabethan era in the second half of the 16th century is usually regarded as the culmination of the English Renaissance. [2]"]}, {"id": 66, "text": "The English Renaissance is different from the Italian Renaissance in several ways. The dominant art forms of the English Renaissance were literature and music. Visual arts in the English Renaissance were much less significant than in the Italian Renaissance. The English period began far later than the Italian, which is usually considered to begin in the late 14th century, and was moving into Mannerism and the Baroque by the 1550s or earlier. [3] In contrast, the English Renaissance can only be said to begin, shakily, in the 1520s, and continued until perhaps 1620. England had a strong tradition of literature in the English vernacular, which gradually increased as English use of the printing press became common by the mid-16th century. By the time of Elizabethan era, a vigorous literary culture in both drama and poetry included poets such as Edmund Spenser, whose verse epic The Faerie Queene had a strong influence on English literature but was eventually overshadowed by the lyrics of William Shakespeare, Thomas Wyatt and others. Typically, the works of these playwrights and poets circulated in manuscript form for some time before they were published, and above all the plays of English Renaissance theatre were the outstanding legacy of the period. [4] The notion of calling this period “The Renaissance” is a modern invention, having been popularized by the historian Jacob Burckhardt in the 19th century. The idea of the Renaissance has rightly come under increased criticism by many cultural historians, and some have contended that the “English Renaissance” has no real tie with the artistic achievements and aims of the Italian artists (Leonardo da Vinci, Michelangelo, Donatello) who are closely identified with Renaissance visual art. The underlined word “culmination” in paragraph 1 is closest in meaning to .................. .", "options": ["decline", "longest era", "high point", "exemption The English Renaissance was a cultural and artistic movement in England dating from the late 15th to the early 17th century. It is associated with the pan-European Renaissance that is usually regarded as beginning in Italy in the late 14th century. [1] The beginning of the English Renaissance is often taken, as a convenience, to be 1485, when the Battle of Bosworth Field ended the Wars of the Roses and inaugurated the Tudor Dynasty. Renaissance style and ideas, however, were slow to penetrate England, and the Elizabethan era in the second half of the 16th century is usually regarded as the culmination of the English Renaissance. [2]"]}, {"id": 67, "text": "The English Renaissance is different from the Italian Renaissance in several ways. The dominant art forms of the English Renaissance were literature and music. Visual arts in the English Renaissance were much less significant than in the Italian Renaissance. The English period began far later than the Italian, which is usually considered to begin in the late 14th century, and was moving into Mannerism and the Baroque by the 1550s or earlier. [3] In contrast, the English Renaissance can only be said to begin, shakily, in the 1520s, and continued until perhaps 1620. England had a strong tradition of literature in the English vernacular, which gradually increased as English use of the printing press became common by the mid-16th century. By the time of Elizabethan era, a vigorous literary culture in both drama and poetry included poets such as Edmund Spenser, whose verse epic The Faerie Queene had a strong influence on English literature but was eventually overshadowed by the lyrics of William Shakespeare, Thomas Wyatt and others. Typically, the works of these playwrights and poets circulated in manuscript form for some time before they were published, and above all the plays of English Renaissance theatre were the outstanding legacy of the period. [4] The notion of calling this period “The Renaissance” is a modern invention, having been popularized by the historian Jacob Burckhardt in the 19th century. The idea of the Renaissance has rightly come under increased criticism by many cultural historians, and some have contended that the “English Renaissance” has no real tie with the artistic achievements and aims of the Italian artists (Leonardo da Vinci, Michelangelo, Donatello) who are closely identified with Renaissance visual art. All of the following are mentioned in paragraph 1 EXCEPT .................... .", "options": ["the century in which renaissance began in Italy", "the decade in which the Renaissance ended in Italy", "a name referring to a family of rulers who reigned in England", "an event proposed as the beginning point for the English Renaissance The English Renaissance was a cultural and artistic movement in England dating from the late 15th to the early 17th century. It is associated with the pan-European Renaissance that is usually regarded as beginning in Italy in the late 14th century. [1] The beginning of the English Renaissance is often taken, as a convenience, to be 1485, when the Battle of Bosworth Field ended the Wars of the Roses and inaugurated the Tudor Dynasty. Renaissance style and ideas, however, were slow to penetrate England, and the Elizabethan era in the second half of the 16th century is usually regarded as the culmination of the English Renaissance. [2]"]}, {"id": 68, "text": "The English Renaissance is different from the Italian Renaissance in several ways. The dominant art forms of the English Renaissance were literature and music. Visual arts in the English Renaissance were much less significant than in the Italian Renaissance. The English period began far later than the Italian, which is usually considered to begin in the late 14th century, and was moving into Mannerism and the Baroque by the 1550s or earlier. [3] In contrast, the English Renaissance can only be said to begin, shakily, in the 1520s, and continued until perhaps 1620. England had a strong tradition of literature in the English vernacular, which gradually increased as English use of the printing press became common by the mid-16th century. By the time of Elizabethan era, a vigorous literary culture in both drama and poetry included poets such as Edmund Spenser, whose verse epic The Faerie Queene had a strong influence on English literature but was eventually overshadowed by the lyrics of William Shakespeare, Thomas Wyatt and others. Typically, the works of these playwrights and poets circulated in manuscript form for some time before they were published, and above all the plays of English Renaissance theatre were the outstanding legacy of the period. [4] The notion of calling this period “The Renaissance” is a modern invention, having been popularized by the historian Jacob Burckhardt in the 19th century. The idea of the Renaissance has rightly come under increased criticism by many cultural historians, and some have contended that the “English Renaissance” has no real tie with the artistic achievements and aims of the Italian artists (Leonardo da Vinci, Michelangelo, Donatello) who are closely identified with Renaissance visual art. According to the passage, which of the following statements is true?", "options": ["The works of English Renaissance writers, such as Shakespeare and Wyatt, generally circulated in manuscripts prior to their publication, with drama emerging as a particularly significant legacy of this era.", "England enjoyed a rich legacy of Latin literary production, a tradition that flourished increasingly with the advent of the printing press, which became prevalent by the mid-16th century.", "The English Renaissance commenced significantly later than its Italian counterpart, and then transitioned into Mannerism and Baroque styles by about the 1550s, ultimately reaching its conclusion in the 17th century.", "There exists a broad scholarly consensus that Italian masters such as Michelangelo and Donatello exerted a profound and transformative influence on their English counterparts during the Renaissance. The English Renaissance was a cultural and artistic movement in England dating from the late 15th to the early 17th century. It is associated with the pan-European Renaissance that is usually regarded as beginning in Italy in the late 14th century. [1] The beginning of the English Renaissance is often taken, as a convenience, to be 1485, when the Battle of Bosworth Field ended the Wars of the Roses and inaugurated the Tudor Dynasty. Renaissance style and ideas, however, were slow to penetrate England, and the Elizabethan era in the second half of the 16th century is usually regarded as the culmination of the English Renaissance. [2]"]}, {"id": 69, "text": "The English Renaissance is different from the Italian Renaissance in several ways. The dominant art forms of the English Renaissance were literature and music. Visual arts in the English Renaissance were much less significant than in the Italian Renaissance. The English period began far later than the Italian, which is usually considered to begin in the late 14th century, and was moving into Mannerism and the Baroque by the 1550s or earlier. [3] In contrast, the English Renaissance can only be said to begin, shakily, in the 1520s, and continued until perhaps 1620. England had a strong tradition of literature in the English vernacular, which gradually increased as English use of the printing press became common by the mid-16th century. By the time of Elizabethan era, a vigorous literary culture in both drama and poetry included poets such as Edmund Spenser, whose verse epic The Faerie Queene had a strong influence on English literature but was eventually overshadowed by the lyrics of William Shakespeare, Thomas Wyatt and others. Typically, the works of these playwrights and poets circulated in manuscript form for some time before they were published, and above all the plays of English Renaissance theatre were the outstanding legacy of the period. [4] The notion of calling this period “The Renaissance” is a modern invention, having been popularized by the historian Jacob Burckhardt in the 19th century. The idea of the Renaissance has rightly come under increased criticism by many cultural historians, and some have contended that the “English Renaissance” has no real tie with the artistic achievements and aims of the Italian artists (Leonardo da Vinci, Michelangelo, Donatello) who are closely identified with Renaissance visual art. Which of the following statements can best be inferred from the passage?", "options": ["Jacob Burckhardt was a prominent historian during the Renaissance period renowned for his scholarship, particularly his popularization of the term “Renaissance” in the 19th century.", "Scholars contend that the inception of the Renaissance first in Italy is intrinsically linked to the nation’s longer monarchic tradition in comparison to other European nations.", "The verse epic The Faerie Queene, penned by Edmund Spenser, exerted a profound influence on subsequent literary works and stood as the most popular literary masterpiece of the Renaissance period.", "The so-called “Renaissance” emerged as a general phenomenon, manifesting itself through various forms of artistic expressions across Europe—for instance in Italy and England sometime from the 14th to 17th centuries. The English Renaissance was a cultural and artistic movement in England dating from the late 15th to the early 17th century. It is associated with the pan-European Renaissance that is usually regarded as beginning in Italy in the late 14th century. [1] The beginning of the English Renaissance is often taken, as a convenience, to be 1485, when the Battle of Bosworth Field ended the Wars of the Roses and inaugurated the Tudor Dynasty. Renaissance style and ideas, however, were slow to penetrate England, and the Elizabethan era in the second half of the 16th century is usually regarded as the culmination of the English Renaissance. [2]"]}, {"id": 70, "text": "The English Renaissance is different from the Italian Renaissance in several ways. The dominant art forms of the English Renaissance were literature and music. Visual arts in the English Renaissance were much less significant than in the Italian Renaissance. The English period began far later than the Italian, which is usually considered to begin in the late 14th century, and was moving into Mannerism and the Baroque by the 1550s or earlier. [3] In contrast, the English Renaissance can only be said to begin, shakily, in the 1520s, and continued until perhaps 1620. England had a strong tradition of literature in the English vernacular, which gradually increased as English use of the printing press became common by the mid-16th century. By the time of Elizabethan era, a vigorous literary culture in both drama and poetry included poets such as Edmund Spenser, whose verse epic The Faerie Queene had a strong influence on English literature but was eventually overshadowed by the lyrics of William Shakespeare, Thomas Wyatt and others. Typically, the works of these playwrights and poets circulated in manuscript form for some time before they were published, and above all the plays of English Renaissance theatre were the outstanding legacy of the period. [4] The notion of calling this period “The Renaissance” is a modern invention, having been popularized by the historian Jacob Burckhardt in the 19th century. The idea of the Renaissance has rightly come under increased criticism by many cultural historians, and some have contended that the “English Renaissance” has no real tie with the artistic achievements and aims of the Italian artists (Leonardo da Vinci, Michelangelo, Donatello) who are closely identified with Renaissance visual art. In which position marked by [1], [2], [3] or [4], can the following sentence best be inserted in the passage? Like most of northern Europe, England saw little of these developments until more than a century later.", "options": ["[1]", "[2]", "[3]", "[4]"]}, {"id": 71, "text": "What made him ……………….. a great diplomat was that he could quote Cervantes’s words about honesty even as he knew no one in the Hall believed in it, including himself.", "options": ["such", "so", "too", "very"]}, {"id": 72, "text": "My father’s younger brother, ……………….. I am name d, was a fighter pilot during World War II.", "options": ["him", "whom", "for his", "for whom"]}, {"id": 73, "text": "The Daycare Center in Berlin was closing sudden ly and ……………….. parents less than two weeks’ notice and no clear explanation.", "options": ["has given", "had given", "given", "to gi ve"]}, {"id": 74, "text": "If you intend to travel, please don’t forget …… ……………… ahead of time, particularly on a Saturday night.", "options": ["to have booked", "booking", "to book", "book"]}, {"id": 75, "text": "Had I realized what you wanted to do in that im portant meeting, I ……………….. .", "options": ["wouldn’t agree", "have not agreed", "shouldn’t agree", "wouldn’t have agreed"]}, {"id": 76, "text": "Fewer jobs are available nowadays, and ……………….. that the Ph.D. degree has become the minimal qualification for the university teacher.", "options": ["it be noted", "it is been noted", "it is to be n oted", "is noted"]}, {"id": 77, "text": "Why don’t they go back and help fix the totally -broken and crime-infested places ……………….. they came?", "options": ["from which", "which", "in that", "from them"]}, {"id": 78, "text": "The White House strategy is to have the presiden t ……………….. out of his protective bubble and directly take on voters’ worries.", "options": ["steps", "to step", "be stepped", "step"]}, {"id": 79, "text": "……………….. Jane’s favorite subject matter is farm animals, she uses abstract painting as a way to reach a greater self-understanding.", "options": ["Despite", "Even though", "However", "In spite of"]}, {"id": 80, "text": "If you look at the videos we were giving them, ……………….. based on Buñuel and surreal imagery.", "options": ["our were", "ours were", "of us were", "th at of us were"]}, {"id": 81, "text": "No one wants to take the lead in fighting for international pollution reduction, .................... selling out future jobs and economic growth.", "options": ["lest are they accused of at home", "lest accused of at home", "lest they be accused at home of", "lest be accus ed at home of \u00006\u0000 \u00007 8 \u00009 (- .............................. \u0000:\u0000*\u0000 ; /0 .............................. )\u0000 < \u0000 ,= \u00002\u0000 \u0000 ; /0 , >+ ? @A \u0000\u0000\u0000\u0000 \u0000 \u0000 8 @A % \u0000 \u0000:\u0000*\u0000 ; /0 % \u0000\u0000B 8 \u00008 \u0000 C,\u0000 \u0000 A D+ .E\u0000BF \u0000 \u0000 + .E\u0000BF @\u0000 \u0000 G\u00000 \u0000 \u0000\u0000\u0000HI A D .J\u0000 /\u0000 : ! \u0000 \u0000\u0000\u0000\u0000\u0000\u0000 521A \u0000\u0000\u0000 3 \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"]}, {"id": 82, "text": "If the blood was still fresh, that meant this murder ……………….. taken place long ago.", "options": ["would not", "shouldn’t have", "ought not", "mustn’t have"]}, {"id": 83, "text": "I took a class with him when I was in college, but I was too young ……………….. teaching.", "options": ["to appreciate what was he", "to appreciate what he was", "appreciating him whom was", "and appreciate what he was"]}, {"id": 84, "text": "I have spent my life trying to warn people abou t the terrible risks of nuclear weapons, ……………….. many of my countrymen.", "options": ["as have", "have done", "did so", "as likewise"]}, {"id": 85, "text": "Last year, he once even declared himself indiff erent about politics, saying he ……………….. out of it altogether.", "options": ["had better staying", "would rather to stay", "would rather stay", "had better to stay Part B: Vocabulary Directions: Questions 16-35 are incomplete sentence s. Beneath each sentence, you will see four words or phrases marked ("]}, {"id": 86, "text": "I recently taught a writing course for undergra duates and was surprised ……………….. how many of them chose to write about their childhoods.", "options": ["to", "in", "as of", "at"]}, {"id": 87, "text": "Self-care contains as many definitions as ther e are people who ……………….. care of themselves.", "options": ["take", "do", "make", "set"]}, {"id": 88, "text": "There’s nothing autobiographical in the book; I just ……………….. a story, although I did use my memory of my home town.", "options": ["made out", "made up", "made in", "made off"]}, {"id": 89, "text": "The broken-down food is ……………….. into the blood stream from the small intestine and the nutrients are carried to each cell in the body.", "options": ["travelled", "deviated", "plowed", "absorbed"]}, {"id": 90, "text": "I promise to remain ……………….. to the welfare of my family, to the people of Arkansas and to this nation.", "options": ["invulnerable", "alleged", "dedicated", "concerne d"]}, {"id": 91, "text": "Some are allowed to take early ……………….., inclu ding the military, police officers and people with physically-demanding jobs.", "options": ["retirement", "wage", "suspension", "migration"]}, {"id": 92, "text": "They called an emergency strategic meeting—not to make a small ……………….. but to make a complete shift in how they operate.", "options": ["career", "business", "adjustment", "fortune"]}, {"id": 93, "text": "The hero of the novel is motivated by a desire for ……………….. against those who have wronged him.", "options": ["inconvenience", "revenge", "impatience", "tenden cy"]}, {"id": 94, "text": "If we do not actively try to preserve our ………… …….., we risk losing the common experience that makes each of us who we are.", "options": ["scope", "future", "satisfaction", "heritage \u0000 \u0000\u0000\u0000\u0000\u0000\u0000 521A \u0000\u0000\u0000 4 \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"]}, {"id": 95, "text": "The majority of arrests carried out by the US m ilitary appear to be entirely ……………….., often based only on the unreliable words of an informant.", "options": ["arbitrary", "justifiable", "guaranteed", "mindfu l"]}, {"id": 96, "text": "Now the city existed as a parking lot of hasti ly ……………….. cars—some with their engines still running.", "options": ["abandoned", "driving", "cast", "refrained"]}, {"id": 97, "text": "For more than two years, a nurse used a web of ……………….. lies to gain employment, and lied again to cover her incompetence.", "options": ["considerate", "white", "elaborate", "concerned"]}, {"id": 98, "text": "The apartments she showed me were ……………….. not deals—enormously expensive, tiny (no roommate possible) and looking onto brick walls.", "options": ["securely", "partially", "deceivingly", "decided ly"]}, {"id": 99, "text": "In fact, a good ……………….. of my library was fou nded on buys from online websites.", "options": ["purchase", "proportion", "establishment", "app earance"]}, {"id": 100, "text": "Jurors almost always start with a strong …………… ….. that someone wouldn’t be charged with a crime unless the police were firmly convinced of his guilt.", "options": ["familiarity", "ambiguity", "presumption", "sonor ity"]}, {"id": 93, "text": "Injuries were minor, and damage was confined to a few floors, but this latest setback underscored the project’s ……………….. luck.", "options": ["perishable", "pure", "rotten", "sudden"]}, {"id": 94, "text": "As they cannot work legally in Thailand, they have little option but to ……………….. a living collecting rubbish, or to take ill-paid informal work on construction sites.", "options": ["seize", "grip", "lead", "scratch"]}, {"id": 95, "text": "Even our 8-year-old, who is bored ……………….. by the unchallenging playgrounds near our home, was greatly excited by the advanced equipment.", "options": ["stiff", "hypnotic", "incurious", "voiceless"]}, {"id": 96, "text": "It is necessary to hold a debate on how best t o regulate the markets. And who are more qualified to ……………….. than two Nobel-prize-winning American economists with famously forthright views on the matter?", "options": ["pent it up", "cut it up", "eke it out", "thrash it out"]}, {"id": 97, "text": "The worry, of course, is that their increasing ly ……………. approach to innovation will mean fewer breakthrough drugs.", "options": ["boisterous", "chary", "convivial", "diligent \u0001 \u0003\u0004\u0005\u0006\u0007\b 521A \u000e\u000f\u0010 5 \u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012\u0012 Part C: Sentence Structure Directions: Choose the sentence with the best word order for each of the following series. Then mark the correct choice on your answer sheet."]}, {"id": 98, "text": "", "options": ["She was supposed to be here today; she said she would be, but she is not.", "She has supposed to be here today; she said she will be, but she was not.", "She had been supposed to be here today; she said she would be, but she has not.", "She is supposed to be here today; she said she will be, but she does not."]}, {"id": 99, "text": "", "options": ["Given that investigators found no traces of forc ed entry, what could it have been other except an inside job?", "Investigators found no traces of forced entry, w hat could it have been otherwise an inside job?", "Given that investigators found no traces of forc ed entry, what could it have been other than an inside job?", "That investigators found no traces of forced ent ry, what could it have been other from an inside job?"]}, {"id": 100, "text": "", "options": ["We want to remain dedicated to offering high-qua lity Italian luxury products, but we also know that we need to move the times and find new clients.", "We want to remain dedicated to offer high-qualit y Italian luxury products, but we also know that we need moving with the times and find new clients.", "We want to remain dedicated to offer high-qualit y Italian luxury products, but we also know we need to move the times and find new clients.", "We want to remain dedicated to offering high-qua lity Italian luxury products, but we also know we need to move with the times and find new clients."]}];
 const QUESTIONS = [
-    // سؤال‌ها
+    {
+        id: 1,
+        text: "The committee's decision was met with widespread ______ because the evidence presented was far from conclusive.",
+        options: ["acclaim", "skepticism", "compliance", "gratitude"],
+        answer: 2
+    },
+    {
+        id: 2,
+        text: "The scientist's explanation was so ______ that even specialists struggled to follow the chain of reasoning.",
+        options: ["lucid", "intricate", "mundane", "plausible"],
+        answer: 2
+    },
+    {
+        id: 3,
+        text: "The new policy is intended to ______ the disparity between urban and rural schools.",
+        options: ["exacerbate", "mitigate", "duplicate", "conceal"],
+        answer: 2
+    },
+    {
+        id: 4,
+        text: "His remarks were deliberately ______, allowing him to deny responsibility if the proposal failed.",
+        options: ["ambiguous", "coherent", "explicit", "concise"],
+        answer: 1
+    },
+    {
+        id: 5,
+        text: "The historian warned against drawing ______ conclusions from a handful of incomplete documents.",
+        options: ["tentative", "sweeping", "marginal", "empirical"],
+        answer: 2
+    },
+    {
+        id: 6,
+        text: "The manager's refusal to reconsider the proposal seemed ______ rather than principled.",
+        options: ["arbitrary", "innovative", "credible", "reciprocal"],
+        answer: 1
+    },
+    {
+        id: 7,
+        text: "The medication may produce ______ side effects in patients with pre-existing conditions.",
+        options: ["negligible", "adverse", "obsolete", "versatile"],
+        answer: 2
+    },
+    {
+        id: 8,
+        text: "The lawyer attempted to ______ the witness's testimony by pointing out several contradictions.",
+        options: ["corroborate", "undermine", "compile", "allocate"],
+        answer: 2
+    },
+    {
+        id: 9,
+        text: "The report provides a ______ account of the negotiations, including details previously omitted.",
+        options: ["comprehensive", "sporadic", "superficial", "redundant"],
+        answer: 1
+    },
+    {
+        id: 10,
+        text: "The professor's criticism was ______; it exposed weaknesses without dismissing the entire theory.",
+        options: ["constructive", "hostile", "irrelevant", "evasive"],
+        answer: 1
+    },
+
+    {
+        id: 11,
+        text: "The factory was closed after inspectors discovered ______ violations of safety regulations.",
+        options: ["incidental", "systematic", "ornamental", "tentative"],
+        answer: 2
+    },
+    {
+        id: 12,
+        text: "The speaker's argument was persuasive because every major claim was ______ by independent evidence.",
+        options: ["substantiated", "exaggerated", "inferred", "withheld"],
+        answer: 1
+    },
+    {
+        id: 13,
+        text: "The company's profits began to ______ once demand for its flagship product declined.",
+        options: ["deteriorate", "proliferate", "stabilize", "accelerate"],
+        answer: 1
+    },
+    {
+        id: 14,
+        text: "Her response was deliberately ______; she answered the question without revealing confidential information.",
+        options: ["discreet", "reckless", "redundant", "obsolete"],
+        answer: 1
+    },
+    {
+        id: 15,
+        text: "The discovery was considered ______ because it challenged several assumptions accepted for decades.",
+        options: ["conventional", "paradigm-shifting", "trivial", "predictable"],
+        answer: 2
+    },
+    {
+        id: 16,
+        text: "The committee rejected the proposal as financially ______ in the long term.",
+        options: ["viable", "tenuous", "audible", "pervasive"],
+        answer: 1
+    },
+    {
+        id: 17,
+        text: "The author's tone becomes increasingly ______ as he describes the government's failure to act.",
+        options: ["indignant", "indifferent", "tentative", "playful"],
+        answer: 1
+    },
+    {
+        id: 18,
+        text: "The two studies appear to ______ each other, although they used different methodologies.",
+        options: ["contradict", "corroborate", "precede", "exclude"],
+        answer: 2
+    },
+    {
+        id: 19,
+        text: "The instructions were sufficiently ______ that several participants interpreted them differently.",
+        options: ["precise", "ambiguous", "rigorous", "consistent"],
+        answer: 2
+    },
+    {
+        id: 20,
+        text: "The researcher was reluctant to ______ the findings before the data had been independently verified.",
+        options: ["publicize", "retrieve", "compile", "subtract"],
+        answer: 1
+    },
+
+    {
+        id: 21,
+        text: "The politician's promise proved ______ when the economic situation changed.",
+        options: ["binding", "tenable", "untenable", "permanent"],
+        answer: 3
+    },
+    {
+        id: 22,
+        text: "The article attempts to ______ a distinction between correlation and causation.",
+        options: ["blur", "preserve", "establish", "invalidate"],
+        answer: 3
+    },
+    {
+        id: 23,
+        text: "The evidence was too ______ to justify such a sweeping accusation.",
+        options: ["conclusive", "circumstantial", "abundant", "explicit"],
+        answer: 2
+    },
+    {
+        id: 24,
+        text: "The old regulations have become ______ because newer legislation addresses the same issues.",
+        options: ["obsolete", "mandatory", "relevant", "binding"],
+        answer: 1
+    },
+    {
+        id: 25,
+        text: "The witness gave a remarkably ______ account despite having been questioned for several hours.",
+        options: ["consistent", "volatile", "fragmentary", "dubious"],
+        answer: 1
+    },
+
+    {
+        id: 26,
+        text: "Had the researchers ______ the anomaly earlier, they might have prevented the entire experiment from being repeated.",
+        options: ["noticed", "been noticed", "notice", "noticing"],
+        answer: 1
+    },
+    {
+        id: 27,
+        text: "No sooner ______ the announcement than the company's share price began to fall.",
+        options: ["they had made", "had they made", "they made", "did they make"],
+        answer: 2
+    },
+    {
+        id: 28,
+        text: "The proposal, ______ several experts had initially opposed, was eventually approved.",
+        options: ["which", "what", "whose", "where"],
+        answer: 1
+    },
+    {
+        id: 29,
+        text: "It is essential that every applicant ______ the required documents before the deadline.",
+        options: ["submits", "submitted", "submit", "will submit"],
+        answer: 3
+    },
+    {
+        id: 30,
+        text: "By the time the auditors arrive, the accountants ______ the records for three consecutive weeks.",
+        options: ["will review", "will have been reviewing", "reviewed", "have reviewed"],
+        answer: 2
+    },
+
+    {
+        id: 31,
+        text: "Rarely ______ such a dramatic change in public opinion within such a short period.",
+        options: ["we witness", "do we witness", "we have witnessed", "witnessed we"],
+        answer: 2
+    },
+    {
+        id: 32,
+        text: "The manager insisted that the report ______ before it was distributed to clients.",
+        options: ["be revised", "is revised", "was revising", "has revised"],
+        answer: 1
+    },
+    {
+        id: 33,
+        text: "The more carefully the evidence is examined, ______ the original conclusion appears.",
+        options: ["less convincing", "the less convincing", "the least convincing", "less convinced"],
+        answer: 2
+    },
+    {
+        id: 34,
+        text: "If the data ______ accurate, the researchers would not have reached such contradictory results.",
+        options: ["had been", "were", "have been", "would be"],
+        answer: 1
+    },
+    {
+        id: 35,
+        text: "The scientist denied ______ any confidential information to the press.",
+        options: ["to disclose", "having disclosed", "disclose", "having been disclosed"],
+        answer: 2
+    },
+    {
+        id: 36,
+        text: "Not until the final experiment ______ the researchers realize that their initial assumption was flawed.",
+        options: ["they completed", "did they complete", "had they completed", "they had completed"],
+        answer: 2
+    },
+    {
+        id: 37,
+        text: "The device is believed ______ by exposure to extreme temperatures.",
+        options: ["to damage", "to have damaged", "to have been damaged", "having damaged"],
+        answer: 3
+    },
+    {
+        id: 38,
+        text: "She would rather the committee ______ the matter until more evidence became available.",
+        options: ["postpones", "postponed", "has postponed", "will postpone"],
+        answer: 2
+    },
+    {
+        id: 39,
+        text: "The report contains several recommendations, none of ______ has yet been implemented.",
+        options: ["that", "which", "them", "what"],
+        answer: 2
+    },
+    {
+        id: 40,
+        text: "Were the company ______ its policy, it could face serious legal consequences.",
+        options: ["to ignore", "ignored", "ignoring", "ignore"],
+        answer: 1
+    },
+
+    {
+        id: 41,
+        text: "The lecture was so demanding that few students could recall ______ the professor had discussed.",
+        options: ["what", "which", "that", "whose"],
+        answer: 1
+    },
+    {
+        id: 42,
+        text: "Having ______ the original manuscript, the archivist immediately contacted the university.",
+        options: ["found", "been found", "finding", "find"],
+        answer: 1
+    },
+    {
+        id: 43,
+        text: "The results are unlikely to be reliable unless the experiment ______ under identical conditions.",
+        options: ["repeats", "is repeated", "will repeat", "has repeating"],
+        answer: 2
+    },
+    {
+        id: 44,
+        text: "The candidate objected to ______ treated as though he had already been found guilty.",
+        options: ["be", "being", "have been", "having"],
+        answer: 2
+    },
+    {
+        id: 45,
+        text: "Much as the researchers ______ to avoid bias, their sample was not completely representative.",
+        options: ["try", "tried", "had tried", "were trying"],
+        answer: 3
+    },
+    {
+        id: 46,
+        text: "The article suggests that the phenomenon may be more complex than ______ previously assumed.",
+        options: ["is", "being", "was", "has been"],
+        answer: 3
+    },
+    {
+        id: 47,
+        text: "Only after the data ______ independently analyzed did the researchers publish the paper.",
+        options: ["had been", "have been", "were being", "would be"],
+        answer: 1
+    },
+    {
+        id: 48,
+        text: "The professor recommended that students ______ the original sources rather than rely solely on summaries.",
+        options: ["consult", "consulted", "consulting", "would consult"],
+        answer: 1
+    },
+    {
+        id: 49,
+        text: "The two theories differ considerably, but they are not necessarily ______ with each other.",
+        options: ["compatible", "incompatible", "mutual", "identical"],
+        answer: 2
+    },
+    {
+        id: 50,
+        text: "He spoke as though he ______ personally involved in the negotiations.",
+        options: ["has been", "had been", "were", "would be"],
+        answer: 2
+    },
+
+    {
+        id: 51,
+        text: "The committee came ______ the conclusion that the evidence was insufficient.",
+        options: ["at", "to", "on", "into"],
+        answer: 2
+    },
+    {
+        id: 52,
+        text: "The new evidence bears ______ the question of whether the original claim was valid.",
+        options: ["on", "at", "for", "to"],
+        answer: 1
+    },
+    {
+        id: 53,
+        text: "The professor's explanation was difficult to ______ because several technical terms were left undefined.",
+        options: ["make out", "make up", "make over", "make off"],
+        answer: 1
+    },
+    {
+        id: 54,
+        text: "The company is trying to cut ______ on unnecessary administrative costs.",
+        options: ["away", "back", "off", "through"],
+        answer: 2
+    },
+    {
+        id: 55,
+        text: "The witness's statement is at ______ with the physical evidence.",
+        options: ["odds", "risk", "stake", "issue"],
+        answer: 1
+    },
+    {
+        id: 56,
+        text: "The researchers carried ______ a series of controlled experiments.",
+        options: ["out", "on", "over", "through"],
+        answer: 1
+    },
+    {
+        id: 57,
+        text: "The final decision rests ______ the board of directors.",
+        options: ["in", "on", "with", "by"],
+        answer: 3
+    },
+    {
+        id: 58,
+        text: "The author takes ______ the assumption that economic growth is always beneficial.",
+        options: ["issue with", "care of", "place of", "advantage of"],
+        answer: 1
+    },
+    {
+        id: 59,
+        text: "The evidence does not ______ the claim that the treatment is effective.",
+        options: ["bear out", "bring about", "break down", "call off"],
+        answer: 1
+    },
+    {
+        id: 60,
+        text: "The researchers ruled ______ the possibility of contamination.",
+        options: ["in", "out", "up", "over"],
+        answer: 2
+    },
+
+    {
+        id: 61,
+        text: "The new findings are broadly ______ line with previous studies.",
+        options: ["at", "by", "in", "on"],
+        answer: 3
+    },
+    {
+        id: 62,
+        text: "The committee decided to put the proposal ______ until further notice.",
+        options: ["away", "off", "aside", "through"],
+        answer: 2
+    },
+    {
+        id: 63,
+        text: "His explanation does not account ______ the discrepancy between the two figures.",
+        options: ["for", "with", "to", "on"],
+        answer: 1
+    },
+    {
+        id: 64,
+        text: "The researcher was accused ______ manipulating the results.",
+        options: ["for", "of", "with", "by"],
+        answer: 2
+    },
+    {
+        id: 65,
+        text: "The policy was introduced with a view ______ reducing unnecessary expenditure.",
+        options: ["for", "at", "to", "on"],
+        answer: 3
+    },
+
+    {
+        id: 66,
+        text: "Scientific progress rarely occurs in a straight line. Researchers often encounter results that appear to contradict their initial hypotheses. Rather than regarding such findings as failures, experienced scientists tend to see them as opportunities to ______ their assumptions.",
+        options: ["reassess", "abandoning", "conceal", "postpone"],
+        answer: 1
+    },
+    {
+        id: 67,
+        text: "A hypothesis becomes scientifically useful only when it can be tested against evidence. If a claim is formulated so vaguely that no possible observation could ______ it, the claim has little explanatory value.",
+        options: ["support", "falsify", "summarize", "duplicate"],
+        answer: 2
+    },
+    {
+        id: 68,
+        text: "Even a well-designed study may produce misleading results if its sample is not representative. Researchers must therefore consider whether the participants ______ the wider population.",
+        options: ["reflect", "are reflecting", "have reflected", "were reflected"],
+        answer: 1
+    },
+    {
+        id: 69,
+        text: "Correlation alone cannot establish causation. Two variables may change together simply because both are influenced by a third factor that has not been ______.",
+        options: ["accounted for", "taken off", "called in", "put aside"],
+        answer: 1
+    },
+    {
+        id: 70,
+        text: "Academic arguments are strongest when conclusions follow logically from evidence. A persuasive writer must therefore distinguish clearly between what the data demonstrate and what can merely be ______ from them.",
+        options: ["inferred", "prevented", "allocated", "excluded"],
+        answer: 1
+    },
+    {
+        id: 71,
+        text: "Memory is not a perfect recording of past events. Each time people recall an experience, the memory may be subtly ______ by later information.",
+        options: ["modified", "prevented", "exhausted", "isolated"],
+        answer: 1
+    },
+    {
+        id: 72,
+        text: "Although technology can increase access to information, abundance does not automatically produce understanding. Without critical evaluation, people may become more vulnerable to information that is misleading or ______.",
+        options: ["irrelevant", "unverified", "transparent", "objective"],
+        answer: 2
+    },
+    {
+        id: 73,
+        text: "Effective communication requires more than accurate vocabulary. Speakers must also consider context, audience, and the assumptions that listeners may ______ to the conversation.",
+        options: ["bring", "take", "put", "carry"],
+        answer: 1
+    },
+    {
+        id: 74,
+        text: "Historical evidence is often incomplete. Scholars therefore compare sources and examine their origins before deciding how much weight should be ______ to a particular account.",
+        options: ["given", "made", "done", "taken"],
+        answer: 1
+    },
+    {
+        id: 75,
+        text: "A theory may remain useful even when some of its predictions fail, provided that researchers can identify the conditions under which it works and those under which it ______.",
+        options: ["does not", "has not", "will not", "wouldn't"],
+        answer: 1
+    },
+
+    {
+        id: 76,
+        text: "Many cities have invested heavily in public transportation to reduce congestion. Yet simply adding buses or trains does not guarantee that commuters will abandon private cars. Researchers have found that reliability, frequency, convenience, and the ease of transferring between routes can matter as much as the number of vehicles available. What is the main idea?",
+        options: [
+            "Public transportation is always cheaper than driving.",
+            "Increasing the number of vehicles is sufficient to change commuter behavior.",
+            "The effectiveness of public transportation depends on several service qualities.",
+            "Private cars are impossible to replace in modern cities."
+        ],
+        answer: 3
+    },
+    {
+        id: 77,
+        text: "A study of workplace productivity found that employees who took short, regular breaks often completed complex tasks more accurately than those who worked continuously. The researchers suggested that brief interruptions may reduce mental fatigue and allow attention to recover. Which inference is best supported?",
+        options: [
+            "Long working hours always increase accuracy.",
+            "Breaks may improve performance on demanding tasks.",
+            "Employees should avoid difficult tasks after lunch.",
+            "Mental fatigue has no effect on accuracy."
+        ],
+        answer: 2
+    },
+    {
+        id: 78,
+        text: "Some historians argue that technological inventions should not be attributed solely to exceptional individuals. Innovations often emerge from networks of engineers, users, institutions, and earlier discoveries. What does the passage imply?",
+        options: [
+            "Individual inventors never contribute significantly.",
+            "Technological change is often cumulative and collaborative.",
+            "Earlier discoveries are irrelevant to innovation.",
+            "Institutions usually prevent technological progress."
+        ],
+        answer: 2
+    },
+    {
+        id: 79,
+        text: "In ecology, removing a predator from an ecosystem can produce effects far beyond the immediate increase in prey. As prey populations grow, vegetation may decline, altering habitats for numerous other species. This illustrates how changes at one trophic level can propagate through an ecosystem. What does this example demonstrate?",
+        options: [
+            "Predators are always harmful to ecosystems.",
+            "Prey populations never regulate vegetation.",
+            "Ecological systems contain interconnected relationships.",
+            "Vegetation determines predator populations exclusively."
+        ],
+        answer: 3
+    },
+    {
+        id: 80,
+        text: "Digital archives have made historical documents accessible to researchers who previously needed to travel long distances. However, digitization can also remove information contained in physical characteristics such as paper quality, annotations, binding, or the order in which pages were assembled. What is the author's attitude toward digitization?",
+        options: [
+            "Entirely negative",
+            "Entirely enthusiastic",
+            "Balanced and qualified",
+            "Indifferent"
+        ],
+        answer: 3
+    },
+
+    {
+        id: 81,
+        text: "Economists sometimes distinguish between a temporary decline in demand and a structural change in consumer preferences. The former may reverse when conditions improve, whereas the latter can persist even after prices or incomes return to previous levels. What is the key distinction?",
+        options: [
+            "Price is irrelevant to consumer behavior.",
+            "Temporary and structural changes differ in persistence and causes.",
+            "Income always determines demand.",
+            "Structural changes occur only during recessions."
+        ],
+        answer: 2
+    },
+    {
+        id: 82,
+        text: "A placebo effect does not mean that a patient's symptoms are imaginary. Expectations can influence perception, stress responses, and certain physiological processes. For this reason, clinical trials often use placebo groups to separate treatment effects from changes that might occur for other reasons. Why are placebo groups used?",
+        options: [
+            "To prove that all symptoms are psychological.",
+            "To eliminate the need for medical treatment.",
+            "To help distinguish treatment effects from other changes.",
+            "To guarantee that every participant improves."
+        ],
+        answer: 3
+    },
+    {
+        id: 83,
+        text: "Languages change continuously. Words may acquire new meanings, grammatical patterns may shift, and sounds may be pronounced differently by younger generations. Linguists generally regard such change as a natural property of living languages rather than as evidence of linguistic decline. What is the main point?",
+        options: [
+            "Language change is inevitable and not necessarily deterioration.",
+            "Younger speakers always use language incorrectly.",
+            "Grammar never changes over time.",
+            "Only pronunciation changes."
+        ],
+        answer: 1
+    },
+    {
+        id: 84,
+        text: "When people evaluate risks, they often rely on vivid examples rather than statistical frequencies. A rare event that receives extensive media coverage may therefore seem more common than a frequent but less dramatic event. Which cognitive tendency is described?",
+        options: [
+            "Confirmation bias",
+            "Availability heuristic",
+            "Anchoring effect",
+            "Group polarization"
+        ],
+        answer: 2
+    },
+    {
+        id: 85,
+        text: "Renewable energy sources such as wind and solar produce electricity without directly burning fossil fuels, but their output varies with weather conditions. Consequently, grids with high shares of these sources may require storage, flexible generation, or stronger connections between regions. What problem is emphasized?",
+        options: [
+            "Renewable energy cannot produce electricity.",
+            "Variable output creates grid-management challenges.",
+            "Solar energy always damages the grid.",
+            "Regional connections reduce renewable generation."
+        ],
+        answer: 2
+    },
+
+    {
+        id: 86,
+        text: "A company introduced a flexible work policy expecting productivity to increase. After six months, productivity had risen in some teams but fallen in others. Managers discovered that the policy worked best where employees had clear goals and frequent communication. What can be inferred?",
+        options: [
+            "Flexible work is universally ineffective.",
+            "Communication and goal clarity may influence the success of flexible work.",
+            "Productivity depends only on location.",
+            "Employees prefer unclear goals."
+        ],
+        answer: 2
+    },
+    {
+        id: 87,
+        text: "In scientific writing, uncertainty is not necessarily a weakness. Statements such as 'the evidence suggests' or 'the results are consistent with' can accurately reflect limitations in the data. Why might scientists use cautious language?",
+        options: [
+            "To avoid presenting any evidence.",
+            "To communicate the strength and limits of evidence accurately.",
+            "Because scientific results are never useful.",
+            "Because readers dislike definite conclusions."
+        ],
+        answer: 2
+    },
+    {
+        id: 88,
+        text: "Urban trees can reduce local temperatures by providing shade and through evapotranspiration. However, their benefits depend on species, placement, water availability, and maintenance. What does the passage suggest?",
+        options: [
+            "All trees have identical effects.",
+            "Urban trees can help reduce heat, but their effectiveness depends on conditions.",
+            "Trees increase urban temperatures.",
+            "Maintenance has no relevance."
+        ],
+        answer: 2
+    },
+    {
+        id: 89,
+        text: "Some educational researchers distinguish between recognizing an answer and being able to generate it without prompts. A student may correctly identify a concept in a multiple-choice test but struggle to explain it independently. What distinction is being made?",
+        options: [
+            "Recognition versus retrieval",
+            "Reading versus writing",
+            "Speed versus accuracy",
+            "Memory versus perception"
+        ],
+        answer: 1
+    },
+    {
+        id: 90,
+        text: "Historical narratives are shaped partly by which sources survive. Records produced by governments or wealthy institutions are often more likely to remain than informal accounts from marginalized groups. What methodological caution follows?",
+        options: [
+            "Surviving records should automatically be trusted.",
+            "Historians should consider whose perspectives may be missing.",
+            "Official documents are never useful.",
+            "Marginalized groups left no records."
+        ],
+        answer: 2
+    },
+
+    {
+        id: 91,
+        text: "Antibiotic resistance can spread when bacteria carrying resistance genes survive treatment and reproduce. Unnecessary antibiotic use can increase this selective pressure. Which statement is best supported?",
+        options: [
+            "Antibiotics directly create every resistance gene.",
+            "Unnecessary use can favor resistant bacteria.",
+            "Resistance occurs only in hospitals.",
+            "Stopping all antibiotics immediately eliminates resistance."
+        ],
+        answer: 2
+    },
+    {
+        id: 92,
+        text: "A market may appear competitive because many firms operate within it, yet competition can remain weak if customers face high switching costs. When changing providers is expensive or inconvenient, firms may have less incentive to improve their services. What is the implication?",
+        options: [
+            "The number of firms alone does not determine competitive pressure.",
+            "Switching costs always benefit consumers.",
+            "Markets with many firms are never competitive.",
+            "Customers never respond to service quality."
+        ],
+        answer: 1
+    },
+    {
+        id: 93,
+        text: "Sleep researchers have found that sleep is involved in memory consolidation. Information learned during the day may be reorganized and strengthened during subsequent sleep. Which conclusion is most reasonable?",
+        options: [
+            "Learning ends when a person falls asleep.",
+            "Sleep may contribute to the stabilization of newly learned information.",
+            "Memory is unrelated to sleep.",
+            "Only physical skills benefit from sleep."
+        ],
+        answer: 2
+    },
+    {
+        id: 94,
+        text: "A forecast is not necessarily wrong simply because the predicted event fails to occur. A probabilistic forecast may have assigned a low but nonzero probability to that event. Evaluating forecasts therefore requires examining calibration across many predictions rather than judging a single outcome. What is the main lesson?",
+        options: [
+            "Every forecast should be perfectly accurate.",
+            "Probabilistic forecasts should be evaluated over multiple predictions.",
+            "A failed prediction proves the model is useless.",
+            "Probability cannot be used for forecasting."
+        ],
+        answer: 2
+    },
+    {
+        id: 95,
+        text: "The spread of a rumor can accelerate when people repeatedly encounter it from different sources, even if those sources ultimately trace back to the same original claim. Repetition can create an impression of independent confirmation. What is the danger?",
+        options: [
+            "Repeated information is always false.",
+            "Apparent multiple confirmations may not be independent.",
+            "People never believe repeated claims.",
+            "Independent sources always share one origin."
+        ],
+        answer: 2
+    },
+
+    {
+        id: 96,
+        text: "In translation, preserving every word literally can sometimes distort the intended meaning because expressions depend on cultural and contextual conventions. Skilled translators therefore balance fidelity to the source with naturalness in the target language. What principle is emphasized?",
+        options: [
+            "Literal translation is always superior.",
+            "Good translation may require balancing literal fidelity with intended meaning.",
+            "Culture has no effect on translation.",
+            "Translators should ignore the source text."
+        ],
+        answer: 2
+    },
+    {
+        id: 97,
+        text: "A well-designed experiment attempts to isolate the effect of one variable by controlling others. If several variables change simultaneously, it becomes difficult to determine which change caused the observed outcome. Why are control conditions important?",
+        options: [
+            "They make experiments unnecessary.",
+            "They help isolate causal effects.",
+            "They guarantee the hypothesis is correct.",
+            "They eliminate all measurement error."
+        ],
+        answer: 2
+    },
+    {
+        id: 98,
+        text: "Some species survive environmental change not because every individual can tolerate new conditions, but because populations contain genetic variation. Individuals with advantageous traits may leave more offspring, causing those traits to become more common. Which process is described?",
+        options: [
+            "Natural selection",
+            "Random sampling",
+            "Cultural diffusion",
+            "Artificial language change"
+        ],
+        answer: 1
+    },
+    {
+        id: 99,
+        text: "A policy may produce an intended benefit while creating an unintended cost elsewhere. For example, a measure that reduces traffic in one district may divert vehicles into neighboring areas. What broader lesson does this illustrate?",
+        options: [
+            "Policies always fail.",
+            "Interventions can have indirect and geographically distributed effects.",
+            "Traffic can never be reduced.",
+            "Unintended effects occur only in transportation."
+        ],
+        answer: 2
+    },
+    {
+        id: 100,
+        text: "Critical reading involves more than understanding what a text says. Readers must examine the evidence offered, identify assumptions, distinguish claims from interpretations, and consider whether alternative explanations have been ignored. Which skill is central to this process?",
+        options: [
+            "Memorizing every sentence",
+            "Evaluating arguments and evidence",
+            "Reading as quickly as possible",
+            "Avoiding alternative interpretations"
+        ],
+        answer: 2
+    }
 ];
 
-/* اتصال به exam.html */
 window.QUESTIONS = QUESTIONS;

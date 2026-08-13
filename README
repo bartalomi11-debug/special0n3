@@ -1,7 +1,7 @@
-سامانه آزمون آنلاین - نسخه اولیه
+میشه قبل هرچیزی یچیز بگممم - نسخه اولیه
 تعداد سؤال: 100
 تنظیمات در config.js:
-durationMinutes = زمان آزمون
+durationMinutes = زمان کون دادن
 maxExits = حداکثر خروج/ترک صفحه
 autoFinishOnMaxExits = پایان خودکار پس از رسیدن به حد
 allowResumeAfterRefresh = ادامه پس از Refresh
